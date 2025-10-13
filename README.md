@@ -14,3 +14,6 @@
 |[bilibili](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/bilibili.ts) | 获取B站个人主页信息 |
 |[Base64](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/base64.ts) | Base64 编码和解码 |
 |[sjzxd](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/sjzxd.ts) | 三角洲行动密码 |
+|[upi](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/upi.ts) | 图床服务 |
+|[whois](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/whois/index.ts) | whois域名查询 |
+|[yiyan](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/yiyan/index.ts) | 一言 |
