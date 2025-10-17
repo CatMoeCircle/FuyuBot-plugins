@@ -2,10 +2,10 @@
     {
         "type": "general",
         "name": "kfc",
-        "version": "1.0.0",
+        "version": "1.0.5",
         "description": "找你的好友索要一份肯德基吧",
         "author": "FY",
-        "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/kfc.ts"
+        "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/kfc/index.ts"
     },
     {
         "type": "general",
@@ -93,5 +93,12 @@
         "description": "一言",
         "author": "FY",
         "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/yiyan/index.ts"
+    },{
+        "type": "general",
+        "name": "dc",
+        "version": "1.0.0",
+        "description": "dc服务器查询",
+        "author": "xiaoqvan",
+        "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/dc.ts"
     }
 ]
