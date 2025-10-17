@@ -1,6 +1,6 @@
 # FuyuBot-plugins
 
-### 插件索引（由 plugins.json 同步生成）
+### 插件索引（由 plugins.json 同步）
 
 | 插件名称 | 版本 | 描述 | 作者 | 本地路径 | GitHub |
 | :--- | :---: | --- | --- | --- | --- |
@@ -18,5 +18,6 @@
 | whois | 1.0.0 | 域名whois查询 | FY | plugins/plugins/whois/index.ts | https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/whois/index.ts |
 | yiyan | 1.0.0 | 一言 | FY | plugins/plugins/yiyan/index.ts | https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/yiyan/index.ts |
 | dc | 1.0.0 | dc服务器查询 | xiaoqvan | plugins/plugins/dc.ts | https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/dc.ts |
+| system | 1.0.0 | 系统状态信息查询 | FY | plugins/plugins/system.ts | https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/system.ts |
 
 > 注：此表格由 `plugins.json` 同步生成，列出了插件名称、版本、描述、作者、仓库链接以及本地文件路径（以仓库根目录为基准）。如需添加/删除插件，请修改 `plugins.json` 并重新同步。
