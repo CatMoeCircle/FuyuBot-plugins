@@ -100,5 +100,13 @@
         "description": "dc服务器查询",
         "author": "xiaoqvan",
         "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/dc.ts"
+    },
+    {
+        "type": "general",
+        "name": "system",
+        "version": "1.0.0",
+        "description": "系统状态信息查询",
+        "author": "FY",
+        "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/system.ts"
     }
 ]
