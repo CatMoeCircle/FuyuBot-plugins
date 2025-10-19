@@ -15,7 +15,7 @@
 | Base64 | 1.0.0 | Base64 编码和解码 | FY | plugins/plugins/base64.ts | https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/base64.ts |
 | sjzxd | 1.0.0 | 三角洲行动密码 | FY | plugins/plugins/sjzxd.ts | https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/sjzxd.ts |
 | upi | 1.0.0 | 图床 | xiaoqvan | plugins/plugins/upi.ts | https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/upi.ts |
-| whois | 1.0.0 | 域名whois查询 | FY | plugins/plugins/whois/index.ts | https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/whois/index.ts |
+| whois | 1.1.0 | 域名whois查询 | FY | plugins/plugins/whois/index.ts | https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/whois/index.ts |
 | yiyan | 1.0.0 | 一言 | FY | plugins/plugins/yiyan/index.ts | https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/yiyan/index.ts |
 | dc | 1.0.0 | dc服务器查询 | xiaoqvan | plugins/plugins/dc.ts | https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/dc.ts |
 | system | 1.0.0 | 系统状态信息查询 | FY | plugins/plugins/system.ts | https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/system.ts |
