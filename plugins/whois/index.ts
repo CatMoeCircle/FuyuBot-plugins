@@ -10,7 +10,7 @@ import fs from "fs";
 export default class whoisPlugin extends Plugin {
   type = "general";
   name = "whois";
-  version = "1.0.0";
+  version = "1.1.0";
   description = "域名信息查询";
   constructor(client: Client) {
     super(client);
@@ -72,8 +72,9 @@ export default class whoisPlugin extends Plugin {
             };
             const imagePath = await generatePng(
               {
-                width: 800,
-                height: 1400,
+                width: 1200,
+                height: "auto",
+                quality: 1.5,
               },
               templateStr,
               props
@@ -81,11 +82,11 @@ export default class whoisPlugin extends Plugin {
             await sendMessage(this.client, message.message.chat_id, {
               media: {
                 photo: {
-                  path: imagePath,
+                  path: imagePath.path,
                 },
               },
             });
-            await fs.promises.unlink(imagePath);
+            await fs.promises.unlink(imagePath.path);
           } catch {
             await sendMessage(this.client, message.message.chat_id, {
               text: "域名信息查询失败，请稍后再试。",
