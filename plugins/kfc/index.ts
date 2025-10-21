@@ -4,12 +4,12 @@ import type { Client } from "tdl";
 import { sendMessage } from "@TDLib/function/message.ts";
 import fs from "fs";
 import kfc from "./kfc.vue?raw";
-import { generatePng } from "@function/gen_png.ts";
+import { generateImage } from "@function/genImg.ts";
 
 export default class KfcPlugin extends Plugin {
   type = "general";
   name = "kfc";
-  version = "1.0.5";
+  version = "1.0.0";
   description = "点个肯德基吧";
   constructor(client: Client) {
     super(client);
@@ -20,7 +20,7 @@ export default class KfcPlugin extends Plugin {
         handler: async (message, _args) => {
           const response = await axios.get("https://api.pearktrue.cn/api/kfc");
           const content = response.data;
-          const imagePath = await generatePng(
+          const imagePath = await generateImage(
             {
               width: 800,
               height: "auto",
@@ -34,11 +34,11 @@ export default class KfcPlugin extends Plugin {
             reply_to_message_id: message.message.id,
             media: {
               photo: {
-                path: imagePath,
+                path: imagePath.path,
               },
             },
           });
-          await fs.promises.unlink(imagePath);
+          await fs.promises.unlink(imagePath.path!);
         },
       },
     };

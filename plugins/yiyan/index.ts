@@ -2,7 +2,7 @@ import axios from "axios";
 import { Plugin } from "@plugin/BasePlugin.ts";
 import type { Client } from "tdl";
 import { sendMessage } from "@TDLib/function/message.ts";
-import { generatePng } from "@function/gen_png.ts";
+import { generateImage } from "@function/genImg.ts";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -33,7 +33,7 @@ export default class yiyanPlugin extends Plugin {
             }
             const templateStr = yiyanvue;
             const props = { hitokoto };
-            const imagePath = await generatePng(
+            const imagePath = await generateImage(
               {
                 width: 800,
                 height: 400,
@@ -44,11 +44,11 @@ export default class yiyanPlugin extends Plugin {
             await sendMessage(this.client, message.message.chat_id, {
               media: {
                 photo: {
-                  path: imagePath,
+                  path: imagePath.path!,
                 },
               },
             });
-            await fs.promises.unlink(imagePath);
+            await fs.promises.unlink(imagePath.path!);
           } catch {
             await sendMessage(this.client, message.message.chat_id, {
               text: "喵呜～获取一言失败，请稍后再试吧~",

@@ -4,13 +4,13 @@ import type { Client } from "tdl";
 import { sendMessage } from "@TDLib/function/message.ts";
 import type { updateNewMessage } from "tdlib-types";
 import whois from "./whois.vue?raw";
-import { generatePng } from "@function/gen_png.ts";
+import { generateImage } from "@function/genImg.ts";
 import fs from "fs";
 
 export default class whoisPlugin extends Plugin {
   type = "general";
   name = "whois";
-  version = "1.1.0";
+  version = "1.0.0";
   description = "域名信息查询";
   constructor(client: Client) {
     super(client);
@@ -70,7 +70,7 @@ export default class whoisPlugin extends Plugin {
               area: ipInfo?.data?.area ?? whoisData.data.area ?? "",
               isp: ipInfo?.data?.isp ?? whoisData.data.isp ?? "",
             };
-            const imagePath = await generatePng(
+            const imagePath = await generateImage(
               {
                 width: 1200,
                 height: "auto",
@@ -86,7 +86,7 @@ export default class whoisPlugin extends Plugin {
                 },
               },
             });
-            await fs.promises.unlink(imagePath.path);
+            await fs.promises.unlink(imagePath.path!);
           } catch {
             await sendMessage(this.client, message.message.chat_id, {
               text: "域名信息查询失败，请稍后再试。",
