@@ -19,7 +19,10 @@ export default class KfcPlugin extends Plugin {
         description: "找你的好友索要一份肯德基吧",
         handler: async (message, _args) => {
           const response = await axios.get("https://api.pearktrue.cn/api/kfc");
-          const content = response.data;
+          let content = response.data;
+          if (typeof content === "string") {
+            content = content.replace(/\\n|\/n/g, "\n");
+          }
           const imagePath = await generateImage(
             {
               width: 800,
