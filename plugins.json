@@ -107,6 +107,8 @@
         "version": "1.0.0",
         "description": "系统状态信息查询",
         "author": "FY",
-        "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/system.ts"
+        "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/system.ts",
+        "permission": "all",
+        "scope": "all"
     }
 ]

@@ -11,7 +11,7 @@ function loadPlugins() {
 }
 
 function generateTable(plugins) {
-  const header = `### 插件索引（由 plugins.json 同步）\n\n| 插件名称 | 版本 | 描述 | 作者 | 查看源码 |\n| :--- | :---: | --- | --- | --- |\n`;
+  const header = `### 插件索引（由 plugins.json 同步）\n\n| 插件名称 | 版本 | 描述 | 作者 | 查看源码 | 权限 | 运行环境 |\n| :--- | :---: | --- | --- | :---: | :---: | :---: |\n`;
   const rows = plugins.map(p => {
     const name = p.name || '';
     const version = p.version || '';
@@ -19,13 +19,17 @@ function generateTable(plugins) {
     const author = p.author || '';
     const github = p.github || '';
 
+    // 权限与运行环境，缺省为 all
+    const permission = p.permission || 'all';
+    const scope = p.scope || p.environment || 'all';
+
     // 生成内嵌的查看源码链接（若无 github 字段则为空）
     const viewLink = github ? `[查看源码](${github})` : '';
 
-    return `| ${name} | ${version} | ${desc} | ${author} | ${viewLink} |`;
+    return `| ${name} | ${version} | ${desc} | ${author} | ${viewLink} | ${permission} | ${scope} |`;
   }).join('\n');
 
-  return header + rows + '\n\n> 注：此表格由 `plugins.json` 同步生成，列出了插件名称、版本、描述、作者与查看源码链接。\n';
+  return header + rows + '\n\n> 注：此表格由 `plugins.json` 同步生成，列出了插件名称、版本、描述、作者、查看源码链接、权限（owner/admin/all）与运行环境（all/private/group/channel）。若未在 `plugins.json` 指定权限或运行环境，默认值为 `all`。\n';
 }
 
 function replaceSection(readme, newSection) {
