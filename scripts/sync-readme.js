@@ -11,32 +11,21 @@ function loadPlugins() {
 }
 
 function generateTable(plugins) {
-  const header = `### 插件索引（由 plugins.json 同步）\n\n| 插件名称 | 版本 | 描述 | 作者 | 本地路径 | GitHub |\n| :--- | :---: | --- | --- | --- | --- |\n`;
+  const header = `### 插件索引（由 plugins.json 同步）\n\n| 插件名称 | 版本 | 描述 | 作者 | 查看源码 |\n| :--- | :---: | --- | --- | --- |\n`;
   const rows = plugins.map(p => {
     const name = p.name || '';
     const version = p.version || '';
     const desc = p.description || '';
     const author = p.author || '';
-    // 试图从 github 字段推断本地路径最后的相对路径
-    let local = '';
-    if (p.github) {
-      try {
-        const u = new URL(p.github);
-        // 取路径部分并去掉 /tree/main/ 前缀
-        let pth = u.pathname;
-        pth = pth.replace(/^\/+/,'');
-        // 如果包含 tree/main, 截取之后的部分
-        pth = pth.replace(/^.*?tree\/(?:main|master)\//, '');
-        local = path.posix.join('plugins', pth);
-      } catch (e) {
-        local = '';
-      }
-    }
     const github = p.github || '';
-    return `| ${name} | ${version} | ${desc} | ${author} | ${local} | ${github} |`;
+
+    // 生成内嵌的查看源码链接（若无 github 字段则为空）
+    const viewLink = github ? `[查看源码](${github})` : '';
+
+    return `| ${name} | ${version} | ${desc} | ${author} | ${viewLink} |`;
   }).join('\n');
 
-  return header + rows + '\n\n> 注：此表格由 `plugins.json` 同步生成，列出了插件名称、版本、描述、作者、仓库链接以及本地文件路径（以仓库根目录为基准）。如需添加/删除插件，请修改 `plugins.json` 并重新同步。\n';
+  return header + rows + '\n\n> 注：此表格由 `plugins.json` 同步生成，列出了插件名称、版本、描述、作者与查看源码链接。\n';
 }
 
 function replaceSection(readme, newSection) {
