@@ -251,6 +251,7 @@ git clone https://github.com/CatMoeCircle/Fuyu_TDBot.git || { echo "克隆失败
 cd Fuyu_TDBot
 
 echo "📦 安装依赖..."
+pnpm install --cpu=wasm32 sharp
 pnpm install || { echo "安装依赖失败"; exit 1; }
 
 echo "🎉 环境配置完成！"
