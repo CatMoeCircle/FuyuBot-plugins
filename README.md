@@ -8,7 +8,7 @@
 | life | 1.0.0 | 人生进度条 | FY | [查看源码](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/life.ts) | all | all |
 | ppx | 1.0.0 | PPX 视频解析 | FY | [查看源码](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/ppx.ts) | all | all |
 | holiday | 1.0.0 | 查询节日信息 | FY | [查看源码](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/holiday.ts) | all | all |
-| epic | 1.0.2 | 发现 Epic 免费游戏 | FY | [查看源码](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/epic.ts) | all | all |
+| epic | 1.0.2 | 发现 Epic 免费游戏 | FY | [查看源码](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/epic/epic.ts) | all | all |
 | Choose | 1.0.0 | 从多个选项中随机选择一个 | FY | [查看源码](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/choose.ts) | all | all |
 | cache | 1.0.0 | 定期清理缓存(>20分钟)自动插件 | FY | [查看源码](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/cache.ts) | all | all |
 | bilibili | 1.0.0 | 获取B站个人主页信息 | FY | [查看源码](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/bilibili.ts) | all | all |
@@ -19,5 +19,7 @@
 | yiyan | 1.0.0 | 一言 | FY | [查看源码](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/yiyan/index.ts) | all | all |
 | dc | 1.0.0 | dc服务器查询 | xiaoqvan | [查看源码](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/dc.ts) | all | all |
 | system | 1.0.0 | 系统状态信息查询 | FY | [查看源码](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/system.ts) | all | all |
+| 头像修改 | 1.0.0 | 修改头像 | FY | [查看源码](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/pfp.ts) | all | all |
+| 系统状态信息查询 | 1.0.0 | 系统状态信息查询 | FY | [查看源码](https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/system/system.ts) | all | all |
 
 > 注：此表格由 `plugins.json` 同步生成，列出了插件名称、版本、描述、作者、查看源码链接、权限（owner/admin/all）与运行环境（all/private/group/channel）。若未在 `plugins.json` 指定权限或运行环境，默认值为 `all`。
