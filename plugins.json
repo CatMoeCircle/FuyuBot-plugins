@@ -14,28 +14,30 @@
         "description": "人生进度条",
         "author": "FY",
         "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/life.ts"
-    }
-    ,{
+    },
+    {
         "type": "general",
         "name": "ppx",
         "version": "1.0.0",
         "description": "PPX 视频解析",
         "author": "FY",
         "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/ppx.ts"
-    },{
+    },
+    {
         "type": "general",
         "name": "holiday",
         "version": "1.0.0",
         "description": "查询节日信息",
         "author": "FY",
         "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/holiday.ts"
-    },{
+    },
+    {
         "type": "general",
         "name": "epic",
         "version": "1.0.2",
         "description": "发现 Epic 免费游戏",
         "author": "FY",
-        "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/epic.ts"
+        "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/epic/epic.ts"
     },
     {
         "type": "general",
@@ -44,56 +46,64 @@
         "description": "从多个选项中随机选择一个",
         "author": "FY",
         "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/choose.ts"
-    },{
+    },
+    {
         "type": "general",
         "name": "cache",
         "version": "1.0.0",
         "description": "定期清理缓存(>20分钟)自动插件",
         "author": "FY",
         "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/cache.ts"
-    },{
+    },
+    {
         "type": "general",
         "name": "bilibili",
         "version": "1.0.0",
         "description": "获取B站个人主页信息",
         "author": "FY",
         "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/bilibili.ts"
-    },{
+    },
+    {
         "type": "general",
         "name": "Base64",
         "version": "1.0.0",
         "description": "Base64 编码和解码",
         "author": "FY",
         "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/base64.ts"
-    },{
+    },
+    {
         "type": "general",
         "name": "sjzxd",
         "version": "1.0.0",
         "description": "三角洲行动密码",
         "author": "FY",
         "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/sjzxd.ts"
-    },{
+    },
+    {
         "type": "general",
         "name": "upi",
         "version": "1.0.0",
         "description": "图床",
         "author": "xiaoqvan",
         "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/upi.ts"
-    },{
+    },
+    {
         "type": "general",
         "name": "whois",
         "version": "1.1.0",
         "description": "域名whois查询",
         "author": "FY",
         "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/whois/index.ts"
-    },{
+    },
+    {
         "type": "general",
         "name": "yiyan",
         "version": "1.0.0",
         "description": "一言",
         "author": "FY",
         "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/yiyan/index.ts"
-    },{
+    },
+    {
         "type": "general",
         "name": "dc",
         "version": "1.0.0",
@@ -107,8 +117,22 @@
         "version": "1.0.0",
         "description": "系统状态信息查询",
         "author": "FY",
-        "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/system.ts",
-        "permission": "all",
-        "scope": "all"
+        "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/system.ts"
+    },
+    {
+        "type": "user",
+        "name": "头像修改",
+        "version": "1.0.0",
+        "description": "修改头像",
+        "author": "FY",
+        "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/pfp.ts"
+    },
+    {
+        "type": "general",
+        "name": "系统状态信息查询",
+        "version": "1.0.0",
+        "description": "系统状态信息查询",
+        "author": "FY",
+        "github": "https://github.com/CatMoeCircle/FuyuBot-plugins/tree/main/plugins/system/system.ts"
     }
 ]
