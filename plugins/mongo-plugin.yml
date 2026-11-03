@@ -1,0 +1,23 @@
+id: mongo-plugin
+name: MongoDB Storage
+summary: 给任意插件提供 storage.mongo：集合级 JSON CRUD、聚合与索引管理。
+description: |
+  注册 `storage.mongo` 服务，把 MongoDB 的常用操作包成统一 JSON 方法：
+  find / find_one / insert / update / delete / count / aggregate / distinct / ensure_index / collections。
+  不认识任何业务表，集合名与过滤条件全部由调用方给；连接失败不拦启动，库恢复后自动重连。
+repo: xiaoqvan/fuyubot-plugin-mongo
+license: MIT OR Apache-2.0
+homepage: https://github.com/xiaoqvan/fuyubot-plugin-mongo
+tags: [mongodb, storage, database]
+api: ">=0.1, <1.0"
+abi: 5
+depends: []
+versions:
+  - version: 0.1.0
+    tag: v0.1.0
+    assets:
+      windows-x86_64: mongo-plugin-0.1.0-windows-x86_64.zip
+      windows-aarch64: mongo-plugin-0.1.0-windows-aarch64.zip
+      linux-x86_64: mongo-plugin-0.1.0-linux-x86_64.zip
+      linux-aarch64: mongo-plugin-0.1.0-linux-aarch64.zip
+      macos-aarch64: mongo-plugin-0.1.0-macos-aarch64.zip
