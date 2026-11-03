@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -31,11 +31,25 @@ jobs:
       - name: Install
         run: pip install -r scripts/requirements.txt
       - name: Build index
-        run: python scripts/build_index.py --output _site/index.json
+        run: python scripts/build_index.py --output index.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Copy schema
-        run: cp schema.json _site/schema.json
+      - name: Stage pages
+        run: |
+          mkdir -p _site
+          cp index.json _site/index.json
+          cp schema.json _site/schema.json
+      - name: Commit generated index
+        run: |
+          if git diff --quiet -- index.json; then
+            echo "index.json 无变化"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.json
+          git commit -m "chore: rebuild index.json"
+          git push
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

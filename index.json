@@ -1,4 +1,107 @@
 {
   "schema": 1,
-  "plugins": []
+  "plugins": [
+    {
+      "id": "image-plugin",
+      "name": "Image Render",
+      "summary": "注册 image.render：把 HTML 或「模板 + 数据」渲染成 JPEG/PNG。",
+      "repo": "xiaoqvan/fuyubot-plugin-image",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugin-image/releases/download/v0.1.0/image-plugin-0.1.0-windows-x86_64.zip",
+              "sha256": "00d30ac92e50e934a74656dc8333c6835fca963cc0f90e079e6b0d4ccacb5a7f",
+              "size": 506949
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugin-image/releases/download/v0.1.0/image-plugin-0.1.0-linux-x86_64.zip",
+              "sha256": "f6492686111c61d86416960f13bcb7b67eb23e8c28d0a3527afe6fa0ae132f22",
+              "size": 760432
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugin-image/releases/download/v0.1.0/image-plugin-0.1.0-macos-aarch64.zip",
+              "sha256": "b24a4ed6e9f6f933b81c090623fe199073b7aca3fcf4f3928525ee2e7b2ed90f",
+              "size": 640809
+            }
+          },
+          "api": ">=0.1, <1.0",
+          "abi": 5
+        }
+      ],
+      "description": "一个插件搞定 HTML 出图：模板、数据、尺寸全由调用方给，插件不含任何业务字段。\n渲染器以独立进程运行（Ultralight 要求主线程），崩了只崩一张图；服务方法 render / ping。\n部署时把 Ultralight 运行时放到 plugin 目录或 image-shot 同级即可。\n",
+      "license": "MIT OR Apache-2.0",
+      "homepage": "https://github.com/xiaoqvan/fuyubot-plugin-image",
+      "tags": [
+        "image",
+        "html",
+        "render"
+      ]
+    },
+    {
+      "id": "mongo-plugin",
+      "name": "MongoDB Storage",
+      "summary": "给任意插件提供 storage.mongo：集合级 JSON CRUD、聚合与索引管理。",
+      "repo": "xiaoqvan/fuyubot-plugin-mongo",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-windows-x86_64.zip",
+              "sha256": "2e0bed34d52afbb59ceb6818f54379b7cd2c441a01f932b73f945000ce97aab3",
+              "size": 3426431
+            },
+            "windows-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-windows-aarch64.zip",
+              "sha256": "102264a1a29e271e05b0429c47ab67fdbafb5ae2c177311199279b2b9879edc9",
+              "size": 3208863
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-linux-x86_64.zip",
+              "sha256": "8d34257558450e774acbe92856f93d6b2a10f6598243083ca5168f7c4106878a",
+              "size": 3720467
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-linux-aarch64.zip",
+              "sha256": "fde051a1ec5d634257bbe41e83935cdfe71b7a332fab274022855728eb273b2e",
+              "size": 3536037
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-macos-aarch64.zip",
+              "sha256": "abb9d4857f835ccc61bf1ee08bdbe27a17fea04ba842f59ccc10e6089569d6c1",
+              "size": 3292162
+            },
+            "android-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-android-aarch64.zip",
+              "sha256": "ab54e803f831ce787fe7f8e8970359f45cfdf6656a1541f7ae0ca7ae3f7c63b0",
+              "size": 3695616
+            },
+            "android-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-android-x86_64.zip",
+              "sha256": "54b2c02f4073b279892ecd5161221d7d1437fcc237e1bebcea920cc85905aea7",
+              "size": 3783239
+            }
+          },
+          "api": ">=0.1, <1.0",
+          "abi": 5
+        }
+      ],
+      "description": "注册 `storage.mongo` 服务，把 MongoDB 的常用操作包成统一 JSON 方法：\nfind / find_one / insert / update / delete / count / aggregate / distinct / ensure_index / collections。\n不认识任何业务表，集合名与过滤条件全部由调用方给；连接失败不拦启动，库恢复后自动重连。\n",
+      "license": "MIT OR Apache-2.0",
+      "homepage": "https://github.com/xiaoqvan/fuyubot-plugin-mongo",
+      "tags": [
+        "mongodb",
+        "storage",
+        "database"
+      ]
+    }
+  ]
 }
