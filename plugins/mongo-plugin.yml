@@ -21,3 +21,5 @@ versions:
       linux-x86_64: mongo-plugin-0.1.0-linux-x86_64.zip
       linux-aarch64: mongo-plugin-0.1.0-linux-aarch64.zip
       macos-aarch64: mongo-plugin-0.1.0-macos-aarch64.zip
+      android-aarch64: mongo-plugin-0.1.0-android-aarch64.zip
+      android-x86_64: mongo-plugin-0.1.0-android-x86_64.zip
