@@ -5,10 +5,10 @@ FuyuBot 的**插件商城索引**：收录条目在这里以 PR 提交，CI 下�
 
 - 索引地址：<https://catmoecircle.github.io/FuyuBot-plugins/index.json>
 - 索引 schema：[`schema.json`](schema.json)
-- 插件格式契约（在 `Fuyu-Bot` 仓）：
-  - [`docs/plugin-format-v1.md`](https://github.com/CatMoeCircle/Fuyu-Bot/blob/master/docs/plugin-format-v1.md)
-  - [`docs/plugin-store-design.md`](https://github.com/CatMoeCircle/Fuyu-Bot/blob/master/docs/plugin-store-design.md)
-  - [`docs/plugin-migration.md`](https://github.com/CatMoeCircle/Fuyu-Bot/blob/master/docs/plugin-migration.md)
+- 插件格式契约（文档站）：
+  - [插件分发格式 v1](https://catmoecircle.github.io/FuyuBot-docs/docs/plugin/bundle/)
+  - [插件商店与分发](https://catmoecircle.github.io/FuyuBot-docs/docs/plugin/store/)
+  - [插件迁移](https://catmoecircle.github.io/FuyuBot-docs/docs/plugin/migration/)
 
 本仓**不是**运行时，也不实现商店客户端；TUI 商店在 `Fuyu-Bot` 的
 `crates/fuyubot-cli/src/panel/store.rs`，只读这里的 `index.json`。
