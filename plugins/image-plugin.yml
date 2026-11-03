@@ -17,7 +17,5 @@ versions:
     tag: v0.1.0
     assets:
       windows-x86_64: image-plugin-0.1.0-windows-x86_64.zip
-      windows-aarch64: image-plugin-0.1.0-windows-aarch64.zip
       linux-x86_64: image-plugin-0.1.0-linux-x86_64.zip
-      linux-aarch64: image-plugin-0.1.0-linux-aarch64.zip
       macos-aarch64: image-plugin-0.1.0-macos-aarch64.zip
