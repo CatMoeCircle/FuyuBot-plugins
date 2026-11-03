@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""从 `plugins/*.yml` 构建 `index.json`（TUI 商店消费的静态索引）。
+"""从 `plugins/*.yml` 构建 `index.json`（商店客户端消费的静态索引）。
 
 用法：
     python scripts/build_index.py --output _site/index.json

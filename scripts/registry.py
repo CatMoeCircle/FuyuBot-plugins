@@ -24,7 +24,7 @@ from typing import Any
 import yaml
 from packaging.version import InvalidVersion, Version
 
-# 与 TUI 商店/契约保持同一组限额。
+# 与商店/契约保持同一组限额。
 MAX_ASSET_BYTES = 50 * 1024 * 1024
 MAX_UNCOMPRESSED_BYTES = 200 * 1024 * 1024
 MAX_FILES = 2000

@@ -10,8 +10,8 @@ FuyuBot 的**插件商城索引**：收录条目在这里以 PR 提交，CI 下�
   - [插件商店与分发](https://catmoecircle.github.io/FuyuBot-docs/docs/plugin/store/)
   - [插件迁移](https://catmoecircle.github.io/FuyuBot-docs/docs/plugin/migration/)
 
-本仓**不是**运行时，也不实现商店客户端；TUI 商店在 `Fuyu-Bot` 的
-`crates/fuyubot-cli/src/panel/store.rs`，只读这里的 `index.json`。
+本仓**不是**运行时，也不实现商店客户端；商店客户端在 `Fuyu-Bot` 内，
+只读这里的 `index.json`。
 
 ## 用起来
 
@@ -22,7 +22,7 @@ FuyuBot 的**插件商城索引**：收录条目在这里以 PR 提交，CI 下�
 registry_url = "https://catmoecircle.github.io/FuyuBot-plugins/index.json"
 ```
 
-然后 `fuyubot run --tui` → 商店页：搜索、看详情、安装、卸载。
+然后打开机器人的插件商店页：搜索、看详情、安装、卸载。
 
 ## 收录一个插件
 
@@ -52,13 +52,13 @@ python scripts/build_index.py --output /tmp/index.json
 
 ## 下架 / 撤版
 
-- 撤某个版本：在该版本加 `yanked: true`（保留审计痕迹），TUI 不会再选它。
+- 撤某个版本：在该版本加 `yanked: true`（保留审计痕迹），商店不会再选它。
 - 整个插件下架：删掉 `plugins/<id>.yml`，PR 合并后索引重建。
 
 ## 信任边界
 
 - CI 只做**契约校验 + sha256**，不做代码审计，也不代表背书；
-- `index.json` 由本仓 CI 生成、Pages 发布，TUI 只信这一份索引；
+- `index.json` 由本仓 CI 生成、Pages 发布，商店只信这一份索引；
 - 签名（minisign / 索引签名）属于 P1，目前没有。
 
 ## 目录
