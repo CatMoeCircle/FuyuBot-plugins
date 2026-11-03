@@ -1,0 +1,25 @@
+# 复制为 plugins/<id>.yml 再改；`_` 开头的文件不会被收录。
+id: com.example.weather
+name: Weather
+summary: 一句话说明
+description: |
+  长描述（可空）。支持换行。
+repo: owner/repo
+license: MIT
+homepage: https://example.com
+tags: [weather]
+# 宿主 API 区间（可选，展示用）
+api: ">=1.0, <2.0"
+# 原生插件建议写；真值以运行时为准
+abi: 5
+# 依赖的服务名（可选；脚本插件也可写）
+depends: [fuyubot.help.commands]
+versions:
+  - version: 1.2.0
+    tag: v1.2.0
+    yanked: false
+    assets:
+      windows-x86_64: com.example.weather-1.2.0-windows-x86_64.zip
+      linux-x86_64: com.example.weather-1.2.0-linux-x86_64.zip
+      # 纯脚本包可以只写 any
+      # any: com.example.weather-1.2.0-any.zip

@@ -1,0 +1,30 @@
+name: validate
+
+on:
+  pull_request:
+    paths:
+      - "plugins/**"
+      - "scripts/**"
+      - "schema.json"
+      - ".github/workflows/validate.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: pip install -r scripts/requirements.txt
+      - name: Validate entries
+        run: python scripts/validate.py --all
+        env:
+          # 公共 release 资产不需要 token；这里只是防限流（fork PR 上没有也不影响）。
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
