@@ -1,0 +1,21 @@
+id: musiccard
+name: MusicCard
+summary: 生成网易云音乐卡片，并以照片回复命令消息。
+description: |
+  支持通过歌曲 ID、网易云歌曲链接或关键词查询歌曲，获取封面、歌词与译文，
+  生成包含歌曲信息、歌词、日期和二维码的卡片图。支持 Windows、Linux、macOS
+  与 Android AArch64/x86_64。
+repo: fengyegf/fuyubot-musiccard
+homepage: https://github.com/fengyegf/fuyubot-musiccard
+tags: [music, netease, card]
+abi: 5
+depends: []
+versions:
+  - version: 0.1.0
+    tag: v0.1.0
+    assets:
+      windows-x86_64: musiccard-0.1.0-windows-x86_64.zip
+      linux-x86_64: musiccard-0.1.0-linux-x86_64.zip
+      macos-aarch64: musiccard-0.1.0-macos-aarch64.zip
+      android-aarch64: musiccard-0.1.0-android-aarch64.zip
+      android-x86_64: musiccard-0.1.0-android-x86_64.zip
