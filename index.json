@@ -102,6 +102,55 @@
         "storage",
         "database"
       ]
+    },
+    {
+      "id": "musiccard",
+      "name": "MusicCard",
+      "summary": "生成网易云音乐卡片，并以照片回复命令消息。",
+      "repo": "fengyegf/fuyubot-musiccard",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/fengyegf/fuyubot-musiccard/releases/download/v0.1.0/musiccard-0.1.0-windows-x86_64.zip",
+              "sha256": "5f25a3d9dd531da8e71e9a588733cb0511de597969ac4d4a13d6521255e763cc",
+              "size": 6630831
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/fengyegf/fuyubot-musiccard/releases/download/v0.1.0/musiccard-0.1.0-linux-x86_64.zip",
+              "sha256": "55230104ea8e6685548b4b023ae93f82be4693ebaeeb2654155ebcadbc3fcd1a",
+              "size": 7705159
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/fengyegf/fuyubot-musiccard/releases/download/v0.1.0/musiccard-0.1.0-macos-aarch64.zip",
+              "sha256": "235d2be7dfca2161d9679fcf7bcc6b0746de09a49828832cbeb20f5dede0ea5d",
+              "size": 6806760
+            },
+            "android-aarch64": {
+              "url": "https://github.com/fengyegf/fuyubot-musiccard/releases/download/v0.1.0/musiccard-0.1.0-android-aarch64.zip",
+              "sha256": "bac2d2fd9cbc3f820217a7f5b67056951c69179f3b3075adef4661a04a07cc01",
+              "size": 7444175
+            },
+            "android-x86_64": {
+              "url": "https://github.com/fengyegf/fuyubot-musiccard/releases/download/v0.1.0/musiccard-0.1.0-android-x86_64.zip",
+              "sha256": "082979e69d05a0f6291f76a3b9b66e5456f0b51e7e0eb37bd7d85257cc9a963e",
+              "size": 7611766
+            }
+          },
+          "abi": 5
+        }
+      ],
+      "description": "支持通过歌曲 ID、网易云歌曲链接或关键词查询歌曲，获取封面、歌词与译文，\n生成包含歌曲信息、歌词、日期和二维码的卡片图。支持 Windows、Linux、macOS\n与 Android AArch64/x86_64。\n",
+      "homepage": "https://github.com/fengyegf/fuyubot-musiccard",
+      "tags": [
+        "music",
+        "netease",
+        "card"
+      ]
     }
   ]
 }
