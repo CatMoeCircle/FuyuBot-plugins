@@ -151,6 +151,55 @@
         "netease",
         "card"
       ]
+    },
+    {
+      "id": "whois",
+      "name": "Whois",
+      "summary": "查询域名 Whois 信息，渲染成信息卡片并以照片回复。",
+      "repo": "fengyegf/fuyubot-whois",
+      "latest": "0.1.1",
+      "versions": [
+        {
+          "version": "0.1.1",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-windows-x86_64.zip",
+              "sha256": "6f260d5dafe6b80b764807352aaea90784993a4ffba90da54640a21697aeebf0",
+              "size": 5718423
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-linux-x86_64.zip",
+              "sha256": "949218aef4783797346c130a1c0c024e93e069a5643f759d7bad4e805a21c660",
+              "size": 5820361
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-macos-aarch64.zip",
+              "sha256": "e703f78b281de503252085868e8a6122125ea901ccf5125a879bd4ea122eface",
+              "size": 5094256
+            },
+            "android-aarch64": {
+              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-android-aarch64.zip",
+              "sha256": "f681df294f51c67b122f9b188a29fb32e4f1ce13fa85e14118d453c1fae19c51",
+              "size": 5232241
+            },
+            "android-x86_64": {
+              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-android-x86_64.zip",
+              "sha256": "bcb4f5f1d95d6f9f11217df3e5e879e3e197fc407807065c5b6a0bc9e68fff16",
+              "size": 5720069
+            }
+          },
+          "abi": 5
+        }
+      ],
+      "description": "支持裸域名、完整 URL、端口、路径与中文域名，展示注册商、注册与到期时间、\n域名状态、DNS 服务器以及服务器 IP 归属；结果在本地渲染成 PNG 信息卡片，\n以照片回复触发消息。支持 Windows、Linux、macOS 与 Android AArch64/x86_64。\n",
+      "homepage": "https://github.com/fengyegf/fuyubot-whois",
+      "tags": [
+        "whois",
+        "domain",
+        "card"
+      ]
     }
   ]
 }
