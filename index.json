@@ -17,32 +17,37 @@
           "assets": {
             "windows-x86_64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-windows-x86_64.zip",
-              "sha256": "d56628cad26cf1ef325db09422ff0f8583eb3a12dbcaa8217c6b21bd9cfad726",
-              "size": 1748471
+              "sha256": "0d6a1b09c8738e8af4deaebb325b27f927ff63f7b175c6a08afadf1171f4355d",
+              "size": 1748472
             },
             "windows-aarch64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-windows-aarch64.zip",
-              "sha256": "29662226ccbfbf828a72a8d2373e74b65e66ed15a59365553b4b9621eb2aaf85",
-              "size": 1646128
+              "sha256": "db841799ec5f1565a2c961af7d8073c7b44f01234c4d08dc737ef120bc13a569",
+              "size": 1646129
             },
             "linux-x86_64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-linux-x86_64.zip",
-              "sha256": "8a7168f79d6af887b86e1ae6b956bd964d2ef37cdbe401d556eafc752bf22c2a",
+              "sha256": "58d6eb82b225f224241a60f61a5c50262615b9c31c9a59b02a2063c1338ee5eb",
               "size": 1961513
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-macos-aarch64.zip",
+              "sha256": "b72ed4764966adcf07277712b3918286f7b7affabd07d1976a9e273c07851a14",
+              "size": 1734826
             },
             "linux-aarch64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-linux-aarch64.zip",
-              "sha256": "6e9cbe6eedd7cdd411b5f67a28f7294c4dd5cd976ea8a07b297617ad79ac6143",
+              "sha256": "b2c3e71ee75ca8b88e3c37ab36d48b8e4a027910e5066259e73fa3d23d694cc8",
               "size": 1873812
             },
             "android-aarch64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-android-aarch64.zip",
-              "sha256": "caee405a181ef5fbff5e1604b1ef859f6bab16a0b992e9a9201e29e474d132cd",
+              "sha256": "a05bef4d7b0d0e09aa9a96c6ecadeaf418ad33d23c6f14ae596b52db1d85a250",
               "size": 1894864
             },
             "android-x86_64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-android-x86_64.zip",
-              "sha256": "643049ad03b573eb716b725a2f24b023be5afa8f8110212b6cc47d370b11a12b",
+              "sha256": "81aad91d62abfd8f89296c02b9c43a3a44312d6c6d280d5b481338aabf088b12",
               "size": 1953811
             }
           },
@@ -74,32 +79,37 @@
           "assets": {
             "windows-x86_64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-windows-x86_64.zip",
-              "sha256": "265e259b240ebf76034fd7655e4e91d80ffd75722da3bfe3f424b3fb6f1797d3",
-              "size": 6355656
+              "sha256": "fecec660f13afaf18335b54e3446bb6849c2b3da96ad810469d48cacd73e19fd",
+              "size": 6355657
             },
             "windows-aarch64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-windows-aarch64.zip",
-              "sha256": "35fc6c64bb94836ddc75bacb875dadc0a1b578ed8a80ced9b705a549fed0c762",
-              "size": 5856803
+              "sha256": "39ecd4a77ba7b8cd99adf9bb5ab2d4c27aecf32818fa26b23deda7d416936210",
+              "size": 5856804
             },
             "linux-x86_64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-linux-x86_64.zip",
-              "sha256": "d1de78ed99857c97f118227da21a68c60c110a19cc79c376760ad338e9826763",
+              "sha256": "b4919e73050421da68a6d28a84e75ee4bdcb03a7b76b635c92ce936b90a52ec6",
               "size": 7161770
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-macos-aarch64.zip",
+              "sha256": "cbe05752b7b12abbb57498cfbd1df6f97589324bf5efcf8bea0c438b9433b8eb",
+              "size": 6275899
             },
             "linux-aarch64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-linux-aarch64.zip",
-              "sha256": "9f897c7f94f9fa6add6f8ea01f29d9b2fb656840cd439060faa4f244047cf3c1",
+              "sha256": "f2d5a6cb3717dced8af23afee546ca3bbc49a1dbd7ce4bc8e3b887bead728f79",
               "size": 6826282
             },
             "android-aarch64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-android-aarch64.zip",
-              "sha256": "112c09db1cb325603c29056f8d8bb6da0a41e935fd9c7c31ba51fba1f4645164",
+              "sha256": "dfe43333d6ea38e202224f5e121912a46d77f14015d8b695f4739008e2b25f0c",
               "size": 6761084
             },
             "android-x86_64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-android-x86_64.zip",
-              "sha256": "54b063b6b3c3a1156ae0f5825c9990f35ad6f68fd5cc6270832ad4e4904944f3",
+              "sha256": "3543c8ee50c0bd9e90b38c2621898cb269a08ac016965ca5c0f2f2468d64ba86",
               "size": 7055969
             }
           },
@@ -132,32 +142,37 @@
           "assets": {
             "windows-x86_64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-windows-x86_64.zip",
-              "sha256": "6f9284f8698b7a84ee7a03cbba613ede63f9d69162783c5c321daf5b19cc58af",
-              "size": 3427005
+              "sha256": "4f4f1ad0cc551fc35e0e46c39fdd6ea637c948ec927c4bef59041971cad1272e",
+              "size": 3427004
             },
             "windows-aarch64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-windows-aarch64.zip",
-              "sha256": "f2c4f983f52c282e1de0406e743c8df209bf028d6fd315794f3f740e2d412842",
+              "sha256": "4f188a755e05e50d38d7b778a017ebd7e4397bb50897be887d31dc864413be87",
               "size": 3211493
             },
             "linux-x86_64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-linux-x86_64.zip",
-              "sha256": "5e5054c14a80d7c4b6fc4cb021aa349adc22005d1c49e02a1c683bb3e4c8e8b2",
+              "sha256": "e24f29b0c327b6882b4c9c23882244ab0a45ec1834fb0047849a2b26637fdfdb",
               "size": 3727464
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-macos-aarch64.zip",
+              "sha256": "320615adf3ae6ba252fbd97b1e616d349d78815f7eeaaa0e44ae32307ca76f55",
+              "size": 3295035
             },
             "linux-aarch64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-linux-aarch64.zip",
-              "sha256": "f21e70745b6dedc6b051aef561d1c9228c832647eac0cd0c0c37f79c5459e118",
+              "sha256": "0e4ebb110be38cb1a68285822f8603323e48c9393b78a0e7f40a7811191fd80b",
               "size": 3539316
             },
             "android-aarch64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-android-aarch64.zip",
-              "sha256": "ff86fc34348649c02d91e20b13d6647c8e3aeeb0101be373beafe90ed525d38c",
+              "sha256": "373b296f537101ec677ab49978efb9154eeeff04ce389727337bdfb98f9ac1f0",
               "size": 3699189
             },
             "android-x86_64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-android-x86_64.zip",
-              "sha256": "d61afe2292301b96959994d0a34ad577b29845bb1728c5ba25e470b13ab1fbec",
+              "sha256": "06623f18f35341a74ac766b2b92a2104f161bd0f31637afd01954a4c1cc4d967",
               "size": 3785900
             }
           },
@@ -188,32 +203,37 @@
           "assets": {
             "windows-x86_64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-windows-x86_64.zip",
-              "sha256": "eb4e25689e178f707fc7749625ad32effadb0c4c6ea96828d4135c864ed33475",
+              "sha256": "6405223a7cbec7f54c6721fba16b3a40865272bc279ca364e0110d738b906c00",
               "size": 1124118
             },
             "windows-aarch64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-windows-aarch64.zip",
-              "sha256": "3322b34310da0156885ce682f526936fd7c48b29e26b9d12d24b1ff750f56287",
-              "size": 998752
+              "sha256": "690fa0cfbf385da6e4a9e4b098a175896e702b7f1e0aaea4a2a6f9b943eb6dc0",
+              "size": 998751
             },
             "linux-x86_64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-linux-x86_64.zip",
-              "sha256": "7e9f9a925eb5c956b4046c391aa100e2180d1e9af654ce73cf0e96956a171b41",
+              "sha256": "71bd295d44a816ea0696319df88e8ef6ba94a1b6bed80020e6d2e21d9e681fe8",
               "size": 1415962
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-macos-aarch64.zip",
+              "sha256": "487f4dcbf87397229056f2c10a8e706019356209dec452b25c42290616f2fd92",
+              "size": 1207340
             },
             "linux-aarch64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-linux-aarch64.zip",
-              "sha256": "39f489452c124c969678577c10b16d3de8790f71da6dea59d8922cb343ad7cd4",
+              "sha256": "c745c8fe0b05e1f55b93353eb7e6949945cdbd7308c1fcc7db742bc4a1487526",
               "size": 1350179
             },
             "android-aarch64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-android-aarch64.zip",
-              "sha256": "3cbd875e6a838e32627a317f4786e75201f5187f3e137589e967e85fb0dc44ef",
+              "sha256": "69393943268ae14f28b51ac116fe17dc5d47ecf5f3b5341753d22948f8b10adf",
               "size": 1328555
             },
             "android-x86_64": {
               "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-android-x86_64.zip",
-              "sha256": "cb46222c70aedb01bc3bb330531ca543e3cc0fbdb90b09ce3da86f7ac19b797f",
+              "sha256": "d60cd8d06c95a7756ec7f7489364f3f7c0ead9289cbf5e2d51d04ff94f95406b",
               "size": 1347842
             }
           },
