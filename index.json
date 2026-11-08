@@ -2,6 +2,235 @@
   "schema": 1,
   "plugins": [
     {
+      "id": "fuyubot.adblock",
+      "name": "Adblock",
+      "summary": "广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核，命中即删除、禁言或封禁。",
+      "repo": "xiaoqvan/fuyubot-plugins",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "depends": [
+            "storage.mongo"
+          ],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-windows-x86_64.zip",
+              "sha256": "d56628cad26cf1ef325db09422ff0f8583eb3a12dbcaa8217c6b21bd9cfad726",
+              "size": 1748471
+            },
+            "windows-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-windows-aarch64.zip",
+              "sha256": "29662226ccbfbf828a72a8d2373e74b65e66ed15a59365553b4b9621eb2aaf85",
+              "size": 1646128
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-linux-x86_64.zip",
+              "sha256": "8a7168f79d6af887b86e1ae6b956bd964d2ef37cdbe401d556eafc752bf22c2a",
+              "size": 1961513
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-linux-aarch64.zip",
+              "sha256": "6e9cbe6eedd7cdd411b5f67a28f7294c4dd5cd976ea8a07b297617ad79ac6143",
+              "size": 1873812
+            },
+            "android-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-android-aarch64.zip",
+              "sha256": "caee405a181ef5fbff5e1604b1ef859f6bab16a0b992e9a9201e29e474d132cd",
+              "size": 1894864
+            },
+            "android-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-android-x86_64.zip",
+              "sha256": "643049ad03b573eb716b725a2f24b023be5afa8f8110212b6cc47d370b11a12b",
+              "size": 1953811
+            }
+          },
+          "api": ">=0.1, <1.0",
+          "abi": 5
+        }
+      ],
+      "description": "一条消息进来，按关键词、文件、贴纸、转发来源、用户名、资料逐项匹配；命中就撤回消息、\n禁言或封禁，并把处置记录写进群绑定的日志频道。没命中的可疑消息（引用、联系人、\n带全局触发词、入群 24h 内改过资料的人）再送 AI 深度审核，判定为广告后自动把关键词 /\n全文 / 名称 / 简介 / 转发来源 / 贴纸集写回黑名单。\n数据全部存在 MongoDB（依赖 `storage.mongo`），插件启动时自动建集合与索引。\n",
+      "license": "MIT OR Apache-2.0",
+      "homepage": "https://github.com/xiaoqvan/fuyubot-plugins",
+      "tags": [
+        "moderation",
+        "antispam",
+        "telegram",
+        "ai"
+      ]
+    },
+    {
+      "id": "fuyubot.html2img",
+      "name": "HTML to Image",
+      "summary": "HTML / Vue 转图片服务：渲染成 PNG / JPEG 并返回本地文件路径，不接收聊天消息。",
+      "repo": "xiaoqvan/fuyubot-plugins",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-windows-x86_64.zip",
+              "sha256": "265e259b240ebf76034fd7655e4e91d80ffd75722da3bfe3f424b3fb6f1797d3",
+              "size": 6355656
+            },
+            "windows-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-windows-aarch64.zip",
+              "sha256": "35fc6c64bb94836ddc75bacb875dadc0a1b578ed8a80ced9b705a549fed0c762",
+              "size": 5856803
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-linux-x86_64.zip",
+              "sha256": "d1de78ed99857c97f118227da21a68c60c110a19cc79c376760ad338e9826763",
+              "size": 7161770
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-linux-aarch64.zip",
+              "sha256": "9f897c7f94f9fa6add6f8ea01f29d9b2fb656840cd439060faa4f244047cf3c1",
+              "size": 6826282
+            },
+            "android-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-android-aarch64.zip",
+              "sha256": "112c09db1cb325603c29056f8d8bb6da0a41e935fd9c7c31ba51fba1f4645164",
+              "size": 6761084
+            },
+            "android-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-android-x86_64.zip",
+              "sha256": "54b063b6b3c3a1156ae0f5825c9990f35ad6f68fd5cc6270832ad4e4904944f3",
+              "size": 7055969
+            }
+          },
+          "api": ">=0.1, <1.0",
+          "abi": 5
+        }
+      ],
+      "description": "注册 `fuyubot.html2img` 服务（方法 `render`），别的插件调用它把一段 HTML / CSS、\n或者一段 Vue 模板（带 data）渲染成图片：默认 JPEG，也可以要 PNG；返回本地文件路径，\n24 小时后自动清理。\n渲染器是 hyper-render 的本地 fork（Blitz + Stylo + Taffy + Vello CPU），纯 Rust，\n不需要 Chromium / WebKit / Node / 外部进程。输出超过 Telegram 照片规格\n（10 MB / 宽 + 高 10000 / 长宽比 20:1）时会在日志里提示会被压缩。\n",
+      "license": "MIT OR Apache-2.0",
+      "homepage": "https://github.com/xiaoqvan/fuyubot-plugins",
+      "tags": [
+        "image",
+        "html",
+        "vue",
+        "render",
+        "jpeg"
+      ]
+    },
+    {
+      "id": "fuyubot.mongo",
+      "name": "MongoDB Storage",
+      "summary": "给任意插件提供 storage.mongo：集合级 JSON CRUD、聚合与索引管理。",
+      "repo": "xiaoqvan/fuyubot-plugins",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-windows-x86_64.zip",
+              "sha256": "6f9284f8698b7a84ee7a03cbba613ede63f9d69162783c5c321daf5b19cc58af",
+              "size": 3427005
+            },
+            "windows-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-windows-aarch64.zip",
+              "sha256": "f2c4f983f52c282e1de0406e743c8df209bf028d6fd315794f3f740e2d412842",
+              "size": 3211493
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-linux-x86_64.zip",
+              "sha256": "5e5054c14a80d7c4b6fc4cb021aa349adc22005d1c49e02a1c683bb3e4c8e8b2",
+              "size": 3727464
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-linux-aarch64.zip",
+              "sha256": "f21e70745b6dedc6b051aef561d1c9228c832647eac0cd0c0c37f79c5459e118",
+              "size": 3539316
+            },
+            "android-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-android-aarch64.zip",
+              "sha256": "ff86fc34348649c02d91e20b13d6647c8e3aeeb0101be373beafe90ed525d38c",
+              "size": 3699189
+            },
+            "android-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-android-x86_64.zip",
+              "sha256": "d61afe2292301b96959994d0a34ad577b29845bb1728c5ba25e470b13ab1fbec",
+              "size": 3785900
+            }
+          },
+          "api": ">=0.1, <1.0",
+          "abi": 5
+        }
+      ],
+      "description": "注册 `storage.mongo` 服务，把 MongoDB 的常用操作包成统一 JSON 方法：\nping / find / find_one / insert / update / delete / count / aggregate / distinct /\nensure_index / collections / configure。\n不认识任何业务表，集合名与过滤条件全部由调用方给；连接失败不拦启动，库恢复后自动重连。\n业务插件也可以用 `configure` 下发连接串与库名。\n",
+      "license": "MIT OR Apache-2.0",
+      "homepage": "https://github.com/xiaoqvan/fuyubot-plugins",
+      "tags": [
+        "mongodb",
+        "storage",
+        "database"
+      ]
+    },
+    {
+      "id": "fuyubot.sqlite",
+      "name": "SQLite Storage",
+      "summary": "给其它插件提供进程级 SQLite：参数化查询、表结构模板、事务批量写入，按插件隔离库文件。",
+      "repo": "xiaoqvan/fuyubot-plugins",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-windows-x86_64.zip",
+              "sha256": "eb4e25689e178f707fc7749625ad32effadb0c4c6ea96828d4135c864ed33475",
+              "size": 1124118
+            },
+            "windows-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-windows-aarch64.zip",
+              "sha256": "3322b34310da0156885ce682f526936fd7c48b29e26b9d12d24b1ff750f56287",
+              "size": 998752
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-linux-x86_64.zip",
+              "sha256": "7e9f9a925eb5c956b4046c391aa100e2180d1e9af654ce73cf0e96956a171b41",
+              "size": 1415962
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-linux-aarch64.zip",
+              "sha256": "39f489452c124c969678577c10b16d3de8790f71da6dea59d8922cb343ad7cd4",
+              "size": 1350179
+            },
+            "android-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-android-aarch64.zip",
+              "sha256": "3cbd875e6a838e32627a317f4786e75201f5187f3e137589e967e85fb0dc44ef",
+              "size": 1328555
+            },
+            "android-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-android-x86_64.zip",
+              "sha256": "cb46222c70aedb01bc3bb330531ca543e3cc0fbdb90b09ce3da86f7ac19b797f",
+              "size": 1347842
+            }
+          },
+          "api": ">=0.1, <1.0",
+          "abi": 5
+        }
+      ],
+      "description": "注册 `fuyubot.sqlite` 服务，所有方法 JSON 进、JSON 出：\ninfo / migrate / templates / execute / query / batch / tables。\n值一律走参数绑定，SQL 文本里只有占位符；SQLite 以 bundled 方式编入，运行时不依赖系统库。\n默认 per_plugin 模式（每个调用方插件一个库文件），也可以切成 shared 共用一份，\n模板表会自动加调用方前缀。\n",
+      "license": "MIT OR Apache-2.0",
+      "homepage": "https://github.com/xiaoqvan/fuyubot-plugins",
+      "tags": [
+        "sqlite",
+        "storage",
+        "database"
+      ]
+    },
+    {
       "id": "image-plugin",
       "name": "Image Render",
       "summary": "注册 image.render：把 HTML 或「模板 + 数据」渲染成 JPEG/PNG。",
