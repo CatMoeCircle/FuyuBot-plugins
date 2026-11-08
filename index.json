@@ -251,47 +251,6 @@
       ]
     },
     {
-      "id": "image-plugin",
-      "name": "Image Render",
-      "summary": "注册 image.render：把 HTML 或「模板 + 数据」渲染成 JPEG/PNG。",
-      "repo": "xiaoqvan/fuyubot-plugin-image",
-      "latest": "0.1.0",
-      "versions": [
-        {
-          "version": "0.1.0",
-          "depends": [],
-          "yanked": false,
-          "assets": {
-            "windows-x86_64": {
-              "url": "https://github.com/xiaoqvan/fuyubot-plugin-image/releases/download/v0.1.0/image-plugin-0.1.0-windows-x86_64.zip",
-              "sha256": "00d30ac92e50e934a74656dc8333c6835fca963cc0f90e079e6b0d4ccacb5a7f",
-              "size": 506949
-            },
-            "linux-x86_64": {
-              "url": "https://github.com/xiaoqvan/fuyubot-plugin-image/releases/download/v0.1.0/image-plugin-0.1.0-linux-x86_64.zip",
-              "sha256": "f6492686111c61d86416960f13bcb7b67eb23e8c28d0a3527afe6fa0ae132f22",
-              "size": 760432
-            },
-            "macos-aarch64": {
-              "url": "https://github.com/xiaoqvan/fuyubot-plugin-image/releases/download/v0.1.0/image-plugin-0.1.0-macos-aarch64.zip",
-              "sha256": "b24a4ed6e9f6f933b81c090623fe199073b7aca3fcf4f3928525ee2e7b2ed90f",
-              "size": 640809
-            }
-          },
-          "api": ">=0.1, <1.0",
-          "abi": 5
-        }
-      ],
-      "description": "一个插件搞定 HTML 出图：模板、数据、尺寸全由调用方给，插件不含任何业务字段。\n渲染器以独立进程运行（Ultralight 要求主线程），崩了只崩一张图；服务方法 render / ping。\n部署时把 Ultralight 运行时放到 plugin 目录或 image-shot 同级即可。\n",
-      "license": "MIT OR Apache-2.0",
-      "homepage": "https://github.com/xiaoqvan/fuyubot-plugin-image",
-      "tags": [
-        "image",
-        "html",
-        "render"
-      ]
-    },
-    {
       "id": "musiccard",
       "name": "MusicCard",
       "summary": "生成网易云音乐卡片，并以照片回复命令消息。",
