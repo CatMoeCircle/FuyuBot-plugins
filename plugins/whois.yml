@@ -5,17 +5,17 @@ description: |
   支持裸域名、完整 URL、端口、路径与中文域名，展示注册商、注册与到期时间、
   域名状态、DNS 服务器以及服务器 IP 归属；结果在本地渲染成 PNG 信息卡片，
   以照片回复触发消息。支持 Windows、Linux、macOS 与 Android AArch64/x86_64。
-repo: fengyegf/fuyubot-whois
-homepage: https://github.com/fengyegf/fuyubot-whois
+repo: fengyegf/fy-plugins
+homepage: https://github.com/fengyegf/fy-plugins
 tags: [whois, domain, card]
 abi: 5
 depends: []
 versions:
-  - version: 0.1.1
-    tag: v0.1.1
+  - version: 0.1.0
+    tag: whois-v0.1.0
     assets:
-      windows-x86_64: whois-0.1.1-windows-x86_64.zip
-      linux-x86_64: whois-0.1.1-linux-x86_64.zip
-      macos-aarch64: whois-0.1.1-macos-aarch64.zip
-      android-aarch64: whois-0.1.1-android-aarch64.zip
-      android-x86_64: whois-0.1.1-android-x86_64.zip
+      windows-x86_64: whois-0.1.0-windows-x86_64.zip
+      linux-x86_64: whois-0.1.0-linux-x86_64.zip
+      macos-aarch64: whois-0.1.0-macos-aarch64.zip
+      android-aarch64: whois-0.1.0-android-aarch64.zip
+      android-x86_64: whois-0.1.0-android-x86_64.zip
