@@ -1,0 +1,29 @@
+id: fuyubot.help
+name: Help (Image)
+summary: 替代框架内置 /help：命令表按插件分组渲染成图片（/help text 出文字版），与内置 help 同 id。
+description: |
+  与框架内置 help 同 id、同服务名（`fuyubot.help.commands`：`register` / `list`），装上即接管
+  `/help`：订阅后取当前命令注册表，交给 `fuyubot.html2img` 渲染成 JPEG / PNG 再回复。
+  命令按登记它的插件分组——归属由宿主的调用者栈判定（ABI v6），插件自报的名字不算数；
+  没有归属的命令收在「其它」里。`/help t` / `/help text` 回同一份分组数据的文字版。
+  回复走宿主的命令回复服务（`fuyubot.host.command`）：发新消息、编辑原命令、ephemeral 由宿主决定。
+  硬依赖 `fuyubot.html2img`（没装时停在 Pending）。
+  ⚠️ 与内置 help 同 id，不能同时加载：装之前先把内置的 `fuyubot_plugin_help.dll` 改名成 `.disable`。
+repo: xiaoqvan/fuyubot-plugins
+license: MIT OR Apache-2.0
+homepage: https://github.com/xiaoqvan/fuyubot-plugins
+tags: [help, image, render, telegram]
+api: ">=0.1.4, <1.0"
+abi: 6
+depends: [fuyubot.html2img]
+versions:
+  - version: 0.1.1
+    tag: v0.1.1
+    assets:
+      windows-x86_64: fuyubot.help-0.1.1-windows-x86_64.zip
+      windows-aarch64: fuyubot.help-0.1.1-windows-aarch64.zip
+      linux-x86_64: fuyubot.help-0.1.1-linux-x86_64.zip
+      macos-aarch64: fuyubot.help-0.1.1-macos-aarch64.zip
+      linux-aarch64: fuyubot.help-0.1.1-linux-aarch64.zip
+      android-aarch64: fuyubot.help-0.1.1-android-aarch64.zip
+      android-x86_64: fuyubot.help-0.1.1-android-x86_64.zip
