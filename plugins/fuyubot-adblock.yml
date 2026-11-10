@@ -12,7 +12,7 @@ license: MIT OR Apache-2.0
 homepage: https://github.com/xiaoqvan/fuyubot-plugins
 tags: [moderation, antispam, telegram, ai]
 api: ">=0.1, <1.0"
-abi: 5
+abi: 6
 depends: [storage.mongo]
 versions:
   - version: 0.1.0
@@ -25,3 +25,15 @@ versions:
       linux-aarch64: fuyubot.adblock-0.1.0-linux-aarch64.zip
       android-aarch64: fuyubot.adblock-0.1.0-android-aarch64.zip
       android-x86_64: fuyubot.adblock-0.1.0-android-x86_64.zip
+
+  # 0.1.1：ABI 6（宿主 0.1.4-rc.1+）；0.1.0 是 ABI 5
+  - version: 0.1.1
+    tag: v0.1.1
+    assets:
+      windows-x86_64: fuyubot.adblock-0.1.1-windows-x86_64.zip
+      windows-aarch64: fuyubot.adblock-0.1.1-windows-aarch64.zip
+      linux-x86_64: fuyubot.adblock-0.1.1-linux-x86_64.zip
+      macos-aarch64: fuyubot.adblock-0.1.1-macos-aarch64.zip
+      linux-aarch64: fuyubot.adblock-0.1.1-linux-aarch64.zip
+      android-aarch64: fuyubot.adblock-0.1.1-android-aarch64.zip
+      android-x86_64: fuyubot.adblock-0.1.1-android-x86_64.zip
