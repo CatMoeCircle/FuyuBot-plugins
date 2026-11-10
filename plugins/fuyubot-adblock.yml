@@ -1,0 +1,39 @@
+id: fuyubot.adblock
+name: Adblock
+summary: 广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核，命中即删除、禁言或封禁。
+description: |
+  一条消息进来，按关键词、文件、贴纸、转发来源、用户名、资料逐项匹配；命中就撤回消息、
+  禁言或封禁，并把处置记录写进群绑定的日志频道。没命中的可疑消息（引用、联系人、
+  带全局触发词、入群 24h 内改过资料的人）再送 AI 深度审核，判定为广告后自动把关键词 /
+  全文 / 名称 / 简介 / 转发来源 / 贴纸集写回黑名单。
+  数据全部存在 MongoDB（依赖 `storage.mongo`），插件启动时自动建集合与索引。
+repo: xiaoqvan/fuyubot-plugins
+license: MIT OR Apache-2.0
+homepage: https://github.com/xiaoqvan/fuyubot-plugins
+tags: [moderation, antispam, telegram, ai]
+api: ">=0.1, <1.0"
+abi: 6
+depends: [storage.mongo]
+versions:
+  - version: 0.1.0
+    tag: v0.1.0
+    assets:
+      windows-x86_64: fuyubot.adblock-0.1.0-windows-x86_64.zip
+      windows-aarch64: fuyubot.adblock-0.1.0-windows-aarch64.zip
+      linux-x86_64: fuyubot.adblock-0.1.0-linux-x86_64.zip
+      macos-aarch64: fuyubot.adblock-0.1.0-macos-aarch64.zip
+      linux-aarch64: fuyubot.adblock-0.1.0-linux-aarch64.zip
+      android-aarch64: fuyubot.adblock-0.1.0-android-aarch64.zip
+      android-x86_64: fuyubot.adblock-0.1.0-android-x86_64.zip
+
+  # 0.1.1：ABI 6（宿主 0.1.4-rc.1+）；0.1.0 是 ABI 5
+  - version: 0.1.1
+    tag: v0.1.1
+    assets:
+      windows-x86_64: fuyubot.adblock-0.1.1-windows-x86_64.zip
+      windows-aarch64: fuyubot.adblock-0.1.1-windows-aarch64.zip
+      linux-x86_64: fuyubot.adblock-0.1.1-linux-x86_64.zip
+      macos-aarch64: fuyubot.adblock-0.1.1-macos-aarch64.zip
+      linux-aarch64: fuyubot.adblock-0.1.1-linux-aarch64.zip
+      android-aarch64: fuyubot.adblock-0.1.1-android-aarch64.zip
+      android-x86_64: fuyubot.adblock-0.1.1-android-x86_64.zip

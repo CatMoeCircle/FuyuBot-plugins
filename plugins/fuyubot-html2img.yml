@@ -1,0 +1,40 @@
+id: fuyubot.html2img
+name: HTML to Image
+summary: HTML / Vue 转图片服务：渲染成 PNG / JPEG 并返回本地文件路径，不接收聊天消息。
+description: |
+  注册 `fuyubot.html2img` 服务（方法 `render`），别的插件调用它把一段 HTML / CSS、
+  或者一段 Vue 模板（带 data）渲染成图片：默认 JPEG，也可以要 PNG；返回本地文件路径，
+  24 小时后自动清理。
+  渲染器是 hyper-render 的本地 fork（Blitz + Stylo + Taffy + Vello CPU），纯 Rust，
+  不需要 Chromium / WebKit / Node / 外部进程。输出超过 Telegram 照片规格
+  （10 MB / 宽 + 高 10000 / 长宽比 20:1）时会在日志里提示会被压缩。
+repo: xiaoqvan/fuyubot-plugins
+license: MIT OR Apache-2.0
+homepage: https://github.com/xiaoqvan/fuyubot-plugins
+tags: [image, html, vue, render, jpeg]
+api: ">=0.1, <1.0"
+abi: 6
+depends: []
+versions:
+  - version: 0.1.0
+    tag: v0.1.0
+    assets:
+      windows-x86_64: fuyubot.html2img-0.1.0-windows-x86_64.zip
+      windows-aarch64: fuyubot.html2img-0.1.0-windows-aarch64.zip
+      linux-x86_64: fuyubot.html2img-0.1.0-linux-x86_64.zip
+      macos-aarch64: fuyubot.html2img-0.1.0-macos-aarch64.zip
+      linux-aarch64: fuyubot.html2img-0.1.0-linux-aarch64.zip
+      android-aarch64: fuyubot.html2img-0.1.0-android-aarch64.zip
+      android-x86_64: fuyubot.html2img-0.1.0-android-x86_64.zip
+
+  # 0.1.1：ABI 6（宿主 0.1.4-rc.1+）；0.1.0 是 ABI 5
+  - version: 0.1.1
+    tag: v0.1.1
+    assets:
+      windows-x86_64: fuyubot.html2img-0.1.1-windows-x86_64.zip
+      windows-aarch64: fuyubot.html2img-0.1.1-windows-aarch64.zip
+      linux-x86_64: fuyubot.html2img-0.1.1-linux-x86_64.zip
+      macos-aarch64: fuyubot.html2img-0.1.1-macos-aarch64.zip
+      linux-aarch64: fuyubot.html2img-0.1.1-linux-aarch64.zip
+      android-aarch64: fuyubot.html2img-0.1.1-android-aarch64.zip
+      android-x86_64: fuyubot.html2img-0.1.1-android-x86_64.zip

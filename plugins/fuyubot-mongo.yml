@@ -1,0 +1,39 @@
+id: fuyubot.mongo
+name: MongoDB Storage
+summary: 给任意插件提供 storage.mongo：集合级 JSON CRUD、聚合与索引管理。
+description: |
+  注册 `storage.mongo` 服务，把 MongoDB 的常用操作包成统一 JSON 方法：
+  ping / find / find_one / insert / update / delete / count / aggregate / distinct /
+  ensure_index / collections / configure。
+  不认识任何业务表，集合名与过滤条件全部由调用方给；连接失败不拦启动，库恢复后自动重连。
+  业务插件也可以用 `configure` 下发连接串与库名。
+repo: xiaoqvan/fuyubot-plugins
+license: MIT OR Apache-2.0
+homepage: https://github.com/xiaoqvan/fuyubot-plugins
+tags: [mongodb, storage, database]
+api: ">=0.1, <1.0"
+abi: 6
+depends: []
+versions:
+  - version: 0.1.0
+    tag: v0.1.0
+    assets:
+      windows-x86_64: fuyubot.mongo-0.1.0-windows-x86_64.zip
+      windows-aarch64: fuyubot.mongo-0.1.0-windows-aarch64.zip
+      linux-x86_64: fuyubot.mongo-0.1.0-linux-x86_64.zip
+      macos-aarch64: fuyubot.mongo-0.1.0-macos-aarch64.zip
+      linux-aarch64: fuyubot.mongo-0.1.0-linux-aarch64.zip
+      android-aarch64: fuyubot.mongo-0.1.0-android-aarch64.zip
+      android-x86_64: fuyubot.mongo-0.1.0-android-x86_64.zip
+
+  # 0.1.1：ABI 6（宿主 0.1.4-rc.1+）；0.1.0 是 ABI 5
+  - version: 0.1.1
+    tag: v0.1.1
+    assets:
+      windows-x86_64: fuyubot.mongo-0.1.1-windows-x86_64.zip
+      windows-aarch64: fuyubot.mongo-0.1.1-windows-aarch64.zip
+      linux-x86_64: fuyubot.mongo-0.1.1-linux-x86_64.zip
+      macos-aarch64: fuyubot.mongo-0.1.1-macos-aarch64.zip
+      linux-aarch64: fuyubot.mongo-0.1.1-linux-aarch64.zip
+      android-aarch64: fuyubot.mongo-0.1.1-android-aarch64.zip
+      android-x86_64: fuyubot.mongo-0.1.1-android-x86_64.zip

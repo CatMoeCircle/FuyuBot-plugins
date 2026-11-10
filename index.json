@@ -2,103 +2,492 @@
   "schema": 1,
   "plugins": [
     {
-      "id": "image-plugin",
-      "name": "Image Render",
-      "summary": "注册 image.render：把 HTML 或「模板 + 数据」渲染成 JPEG/PNG。",
-      "repo": "xiaoqvan/fuyubot-plugin-image",
-      "latest": "0.1.0",
+      "id": "fuyubot.adblock",
+      "name": "Adblock",
+      "summary": "广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核，命中即删除、禁言或封禁。",
+      "repo": "xiaoqvan/fuyubot-plugins",
+      "latest": "0.1.1",
       "versions": [
         {
-          "version": "0.1.0",
-          "depends": [],
+          "version": "0.1.1",
+          "depends": [
+            "storage.mongo"
+          ],
           "yanked": false,
           "assets": {
             "windows-x86_64": {
-              "url": "https://github.com/xiaoqvan/fuyubot-plugin-image/releases/download/v0.1.0/image-plugin-0.1.0-windows-x86_64.zip",
-              "sha256": "00d30ac92e50e934a74656dc8333c6835fca963cc0f90e079e6b0d4ccacb5a7f",
-              "size": 506949
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.adblock-0.1.1-windows-x86_64.zip",
+              "sha256": "c7679e96e9861225b43d2b486920c1109fa3afd0ab78a6855ec1cf6c1668f20a",
+              "size": 1777688
+            },
+            "windows-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.adblock-0.1.1-windows-aarch64.zip",
+              "sha256": "e659e91d1c878f00bb2287036f2f40b0a5bf7c59c5e9fc32ac694df27227eb89",
+              "size": 1672416
             },
             "linux-x86_64": {
-              "url": "https://github.com/xiaoqvan/fuyubot-plugin-image/releases/download/v0.1.0/image-plugin-0.1.0-linux-x86_64.zip",
-              "sha256": "f6492686111c61d86416960f13bcb7b67eb23e8c28d0a3527afe6fa0ae132f22",
-              "size": 760432
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.adblock-0.1.1-linux-x86_64.zip",
+              "sha256": "105ffb44fe96db0e1b2709dc295317dcd0462fce7369508dbdff942baf302b64",
+              "size": 2014485
             },
             "macos-aarch64": {
-              "url": "https://github.com/xiaoqvan/fuyubot-plugin-image/releases/download/v0.1.0/image-plugin-0.1.0-macos-aarch64.zip",
-              "sha256": "b24a4ed6e9f6f933b81c090623fe199073b7aca3fcf4f3928525ee2e7b2ed90f",
-              "size": 640809
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.adblock-0.1.1-macos-aarch64.zip",
+              "sha256": "def1862f31089c85dc50e5dd9ee4438e56c0483111d9ad34e264e724a21d0612",
+              "size": 1780331
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.adblock-0.1.1-linux-aarch64.zip",
+              "sha256": "28fda0b5328cbe17d09dd916eb61780db85ac7336ce55adff4af6aed99597372",
+              "size": 1924575
+            },
+            "android-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.adblock-0.1.1-android-aarch64.zip",
+              "sha256": "fc8d2ad322199ed26c7dc3659d1ab2e6f251b6ecd779049da1d29c3f61475255",
+              "size": 1948984
+            },
+            "android-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.adblock-0.1.1-android-x86_64.zip",
+              "sha256": "f3d98160d399430bf4b7c7f5da1450f30dac843416dbed105ef8cb86457970c7",
+              "size": 2008579
+            }
+          },
+          "api": ">=0.1, <1.0",
+          "abi": 6
+        },
+        {
+          "version": "0.1.0",
+          "depends": [
+            "storage.mongo"
+          ],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-windows-x86_64.zip",
+              "sha256": "0d6a1b09c8738e8af4deaebb325b27f927ff63f7b175c6a08afadf1171f4355d",
+              "size": 1748472
+            },
+            "windows-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-windows-aarch64.zip",
+              "sha256": "db841799ec5f1565a2c961af7d8073c7b44f01234c4d08dc737ef120bc13a569",
+              "size": 1646129
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-linux-x86_64.zip",
+              "sha256": "58d6eb82b225f224241a60f61a5c50262615b9c31c9a59b02a2063c1338ee5eb",
+              "size": 1961513
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-macos-aarch64.zip",
+              "sha256": "b72ed4764966adcf07277712b3918286f7b7affabd07d1976a9e273c07851a14",
+              "size": 1734826
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-linux-aarch64.zip",
+              "sha256": "b2c3e71ee75ca8b88e3c37ab36d48b8e4a027910e5066259e73fa3d23d694cc8",
+              "size": 1873812
+            },
+            "android-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-android-aarch64.zip",
+              "sha256": "a05bef4d7b0d0e09aa9a96c6ecadeaf418ad33d23c6f14ae596b52db1d85a250",
+              "size": 1894864
+            },
+            "android-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.adblock-0.1.0-android-x86_64.zip",
+              "sha256": "81aad91d62abfd8f89296c02b9c43a3a44312d6c6d280d5b481338aabf088b12",
+              "size": 1953811
             }
           },
           "api": ">=0.1, <1.0",
           "abi": 5
         }
       ],
-      "description": "一个插件搞定 HTML 出图：模板、数据、尺寸全由调用方给，插件不含任何业务字段。\n渲染器以独立进程运行（Ultralight 要求主线程），崩了只崩一张图；服务方法 render / ping。\n部署时把 Ultralight 运行时放到 plugin 目录或 image-shot 同级即可。\n",
+      "description": "一条消息进来，按关键词、文件、贴纸、转发来源、用户名、资料逐项匹配；命中就撤回消息、\n禁言或封禁，并把处置记录写进群绑定的日志频道。没命中的可疑消息（引用、联系人、\n带全局触发词、入群 24h 内改过资料的人）再送 AI 深度审核，判定为广告后自动把关键词 /\n全文 / 名称 / 简介 / 转发来源 / 贴纸集写回黑名单。\n数据全部存在 MongoDB（依赖 `storage.mongo`），插件启动时自动建集合与索引。\n",
       "license": "MIT OR Apache-2.0",
-      "homepage": "https://github.com/xiaoqvan/fuyubot-plugin-image",
+      "homepage": "https://github.com/xiaoqvan/fuyubot-plugins",
       "tags": [
-        "image",
-        "html",
-        "render"
+        "moderation",
+        "antispam",
+        "telegram",
+        "ai"
       ]
     },
     {
-      "id": "mongo-plugin",
-      "name": "MongoDB Storage",
-      "summary": "给任意插件提供 storage.mongo：集合级 JSON CRUD、聚合与索引管理。",
-      "repo": "xiaoqvan/fuyubot-plugin-mongo",
-      "latest": "0.1.0",
+      "id": "fuyubot.help",
+      "name": "Help (Image)",
+      "summary": "替代框架内置 /help：命令表按插件分组渲染成图片（/help text 出文字版），与内置 help 同 id。",
+      "repo": "xiaoqvan/fuyubot-plugins",
+      "latest": "0.1.1",
       "versions": [
+        {
+          "version": "0.1.1",
+          "depends": [
+            "fuyubot.html2img"
+          ],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.help-0.1.1-windows-x86_64.zip",
+              "sha256": "9fc592fdc29b2134b1990f5ff5505ac8ced83bd75938de990344a2e6a7dc283b",
+              "size": 229078
+            },
+            "windows-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.help-0.1.1-windows-aarch64.zip",
+              "sha256": "e2e6b649646e997d4868ccfab1e7c62cbc3f9c782e5ce8fce9db0f899d0ca167",
+              "size": 212931
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.help-0.1.1-linux-x86_64.zip",
+              "sha256": "0dccc8a4571afcc27c58e0ba5d5caff7b17701344b251192229e49a5bbc277a9",
+              "size": 361797
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.help-0.1.1-macos-aarch64.zip",
+              "sha256": "60265924bf2f1e70221eca9f896c36fcfbd0852db2e5b9c8f115bb06be794c7f",
+              "size": 311265
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.help-0.1.1-linux-aarch64.zip",
+              "sha256": "982f368a623f724e5f76a75ce191edd2877484c1ac37f3749a6c095124cc0f0b",
+              "size": 341291
+            },
+            "android-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.help-0.1.1-android-aarch64.zip",
+              "sha256": "47073ba5ab885234df443fc54d6362fffc58e12cb89f0fc706224a4985fa1355",
+              "size": 358480
+            },
+            "android-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.help-0.1.1-android-x86_64.zip",
+              "sha256": "74ad6ed4ac00194bff9db402b24092d0e3dafcc2f9307c50bd6ac4c23a3318af",
+              "size": 366798
+            }
+          },
+          "api": ">=0.1.4, <1.0",
+          "abi": 6
+        }
+      ],
+      "description": "与框架内置 help 同 id、同服务名（`fuyubot.help.commands`：`register` / `list`），装上即接管\n`/help`：订阅后取当前命令注册表，交给 `fuyubot.html2img` 渲染成 JPEG / PNG 再回复。\n命令按登记它的插件分组——归属由宿主的调用者栈判定（ABI v6），插件自报的名字不算数；\n没有归属的命令收在「其它」里。`/help t` / `/help text` 回同一份分组数据的文字版。\n回复走宿主的命令回复服务（`fuyubot.host.command`）：发新消息、编辑原命令、ephemeral 由宿主决定。\n硬依赖 `fuyubot.html2img`（没装时停在 Pending）。\n⚠️ 与内置 help 同 id，不能同时加载：装之前先把内置的 `fuyubot_plugin_help.dll` 改名成 `.disable`。\n",
+      "license": "MIT OR Apache-2.0",
+      "homepage": "https://github.com/xiaoqvan/fuyubot-plugins",
+      "tags": [
+        "help",
+        "image",
+        "render",
+        "telegram"
+      ]
+    },
+    {
+      "id": "fuyubot.html2img",
+      "name": "HTML to Image",
+      "summary": "HTML / Vue 转图片服务：渲染成 PNG / JPEG 并返回本地文件路径，不接收聊天消息。",
+      "repo": "xiaoqvan/fuyubot-plugins",
+      "latest": "0.1.1",
+      "versions": [
+        {
+          "version": "0.1.1",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.html2img-0.1.1-windows-x86_64.zip",
+              "sha256": "8e86a9c0fbe9051b627d10ef301a50ecd8ca8d22132519c595ea9280f93b9b2d",
+              "size": 6356497
+            },
+            "windows-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.html2img-0.1.1-windows-aarch64.zip",
+              "sha256": "1a178bc1127195abfe480e13c988e5086f433046ab464b4bb4c7de64e4b847f7",
+              "size": 5856994
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.html2img-0.1.1-linux-x86_64.zip",
+              "sha256": "08f0e6ffd6966491167711fdc0885230d274f3de4b5de641fdc35c6c4380b7dc",
+              "size": 7162107
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.html2img-0.1.1-macos-aarch64.zip",
+              "sha256": "b7561daaace6f8544a5273712e767291765d06033212ba68751cbb1b4d12d8a6",
+              "size": 6276441
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.html2img-0.1.1-linux-aarch64.zip",
+              "sha256": "7671a068bbc8bb8d6a71ae9129585b61f7aa92ae92623bff85675df202fcc947",
+              "size": 6826627
+            },
+            "android-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.html2img-0.1.1-android-aarch64.zip",
+              "sha256": "1f4f48055bdcd09ff69db34758c529a4455d9fc82ed891d1c6d75b9ecdf71108",
+              "size": 6761638
+            },
+            "android-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.html2img-0.1.1-android-x86_64.zip",
+              "sha256": "20d773a408ae6fd2d32e1814d06b19c5c19f53716181c31d44811b3379edf61b",
+              "size": 7056768
+            }
+          },
+          "api": ">=0.1, <1.0",
+          "abi": 6
+        },
         {
           "version": "0.1.0",
           "depends": [],
           "yanked": false,
           "assets": {
             "windows-x86_64": {
-              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-windows-x86_64.zip",
-              "sha256": "2e0bed34d52afbb59ceb6818f54379b7cd2c441a01f932b73f945000ce97aab3",
-              "size": 3426431
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-windows-x86_64.zip",
+              "sha256": "fecec660f13afaf18335b54e3446bb6849c2b3da96ad810469d48cacd73e19fd",
+              "size": 6355657
             },
             "windows-aarch64": {
-              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-windows-aarch64.zip",
-              "sha256": "102264a1a29e271e05b0429c47ab67fdbafb5ae2c177311199279b2b9879edc9",
-              "size": 3208863
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-windows-aarch64.zip",
+              "sha256": "39ecd4a77ba7b8cd99adf9bb5ab2d4c27aecf32818fa26b23deda7d416936210",
+              "size": 5856804
             },
             "linux-x86_64": {
-              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-linux-x86_64.zip",
-              "sha256": "8d34257558450e774acbe92856f93d6b2a10f6598243083ca5168f7c4106878a",
-              "size": 3720467
-            },
-            "linux-aarch64": {
-              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-linux-aarch64.zip",
-              "sha256": "fde051a1ec5d634257bbe41e83935cdfe71b7a332fab274022855728eb273b2e",
-              "size": 3536037
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-linux-x86_64.zip",
+              "sha256": "b4919e73050421da68a6d28a84e75ee4bdcb03a7b76b635c92ce936b90a52ec6",
+              "size": 7161770
             },
             "macos-aarch64": {
-              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-macos-aarch64.zip",
-              "sha256": "abb9d4857f835ccc61bf1ee08bdbe27a17fea04ba842f59ccc10e6089569d6c1",
-              "size": 3292162
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-macos-aarch64.zip",
+              "sha256": "cbe05752b7b12abbb57498cfbd1df6f97589324bf5efcf8bea0c438b9433b8eb",
+              "size": 6275899
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-linux-aarch64.zip",
+              "sha256": "f2d5a6cb3717dced8af23afee546ca3bbc49a1dbd7ce4bc8e3b887bead728f79",
+              "size": 6826282
             },
             "android-aarch64": {
-              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-android-aarch64.zip",
-              "sha256": "ab54e803f831ce787fe7f8e8970359f45cfdf6656a1541f7ae0ca7ae3f7c63b0",
-              "size": 3695616
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-android-aarch64.zip",
+              "sha256": "dfe43333d6ea38e202224f5e121912a46d77f14015d8b695f4739008e2b25f0c",
+              "size": 6761084
             },
             "android-x86_64": {
-              "url": "https://github.com/xiaoqvan/fuyubot-plugin-mongo/releases/download/v0.1.0/mongo-plugin-0.1.0-android-x86_64.zip",
-              "sha256": "54b2c02f4073b279892ecd5161221d7d1437fcc237e1bebcea920cc85905aea7",
-              "size": 3783239
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.html2img-0.1.0-android-x86_64.zip",
+              "sha256": "3543c8ee50c0bd9e90b38c2621898cb269a08ac016965ca5c0f2f2468d64ba86",
+              "size": 7055969
             }
           },
           "api": ">=0.1, <1.0",
           "abi": 5
         }
       ],
-      "description": "注册 `storage.mongo` 服务，把 MongoDB 的常用操作包成统一 JSON 方法：\nfind / find_one / insert / update / delete / count / aggregate / distinct / ensure_index / collections。\n不认识任何业务表，集合名与过滤条件全部由调用方给；连接失败不拦启动，库恢复后自动重连。\n",
+      "description": "注册 `fuyubot.html2img` 服务（方法 `render`），别的插件调用它把一段 HTML / CSS、\n或者一段 Vue 模板（带 data）渲染成图片：默认 JPEG，也可以要 PNG；返回本地文件路径，\n24 小时后自动清理。\n渲染器是 hyper-render 的本地 fork（Blitz + Stylo + Taffy + Vello CPU），纯 Rust，\n不需要 Chromium / WebKit / Node / 外部进程。输出超过 Telegram 照片规格\n（10 MB / 宽 + 高 10000 / 长宽比 20:1）时会在日志里提示会被压缩。\n",
       "license": "MIT OR Apache-2.0",
-      "homepage": "https://github.com/xiaoqvan/fuyubot-plugin-mongo",
+      "homepage": "https://github.com/xiaoqvan/fuyubot-plugins",
+      "tags": [
+        "image",
+        "html",
+        "vue",
+        "render",
+        "jpeg"
+      ]
+    },
+    {
+      "id": "fuyubot.mongo",
+      "name": "MongoDB Storage",
+      "summary": "给任意插件提供 storage.mongo：集合级 JSON CRUD、聚合与索引管理。",
+      "repo": "xiaoqvan/fuyubot-plugins",
+      "latest": "0.1.1",
+      "versions": [
+        {
+          "version": "0.1.1",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.mongo-0.1.1-windows-x86_64.zip",
+              "sha256": "a4eb26799fad9cd09fdceec695a01abf34896acf6dfc132281fa1d207e51c527",
+              "size": 3427633
+            },
+            "windows-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.mongo-0.1.1-windows-aarch64.zip",
+              "sha256": "ee595fcdde389cdbb08785febad88896f4ae9b93c11a4e52846ea88502b61c84",
+              "size": 3212222
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.mongo-0.1.1-linux-x86_64.zip",
+              "sha256": "8453e9f4d5d7887368392f6a820c27a2507549614877fae73445b5728b6085ae",
+              "size": 3728964
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.mongo-0.1.1-macos-aarch64.zip",
+              "sha256": "698e1b9345a9042a63be2bc04eab4bc27989f83ec124c271e623021584610f69",
+              "size": 3295368
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.mongo-0.1.1-linux-aarch64.zip",
+              "sha256": "fc6ce0c8d36bcdaabaec86347f7b9b331a7ea49d85948f850ad42875633284aa",
+              "size": 3538886
+            },
+            "android-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.mongo-0.1.1-android-aarch64.zip",
+              "sha256": "6e5cebb275d7379753aa209225dc9bf84337fd46eff10bf878f07610e89a438d",
+              "size": 3700793
+            },
+            "android-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.mongo-0.1.1-android-x86_64.zip",
+              "sha256": "0beb77329d917b31d58d1f250456142c610253cafbd794c214ebdf5b692e44d5",
+              "size": 3787967
+            }
+          },
+          "api": ">=0.1, <1.0",
+          "abi": 6
+        },
+        {
+          "version": "0.1.0",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-windows-x86_64.zip",
+              "sha256": "4f4f1ad0cc551fc35e0e46c39fdd6ea637c948ec927c4bef59041971cad1272e",
+              "size": 3427004
+            },
+            "windows-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-windows-aarch64.zip",
+              "sha256": "4f188a755e05e50d38d7b778a017ebd7e4397bb50897be887d31dc864413be87",
+              "size": 3211493
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-linux-x86_64.zip",
+              "sha256": "e24f29b0c327b6882b4c9c23882244ab0a45ec1834fb0047849a2b26637fdfdb",
+              "size": 3727464
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-macos-aarch64.zip",
+              "sha256": "320615adf3ae6ba252fbd97b1e616d349d78815f7eeaaa0e44ae32307ca76f55",
+              "size": 3295035
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-linux-aarch64.zip",
+              "sha256": "0e4ebb110be38cb1a68285822f8603323e48c9393b78a0e7f40a7811191fd80b",
+              "size": 3539316
+            },
+            "android-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-android-aarch64.zip",
+              "sha256": "373b296f537101ec677ab49978efb9154eeeff04ce389727337bdfb98f9ac1f0",
+              "size": 3699189
+            },
+            "android-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.mongo-0.1.0-android-x86_64.zip",
+              "sha256": "06623f18f35341a74ac766b2b92a2104f161bd0f31637afd01954a4c1cc4d967",
+              "size": 3785900
+            }
+          },
+          "api": ">=0.1, <1.0",
+          "abi": 5
+        }
+      ],
+      "description": "注册 `storage.mongo` 服务，把 MongoDB 的常用操作包成统一 JSON 方法：\nping / find / find_one / insert / update / delete / count / aggregate / distinct /\nensure_index / collections / configure。\n不认识任何业务表，集合名与过滤条件全部由调用方给；连接失败不拦启动，库恢复后自动重连。\n业务插件也可以用 `configure` 下发连接串与库名。\n",
+      "license": "MIT OR Apache-2.0",
+      "homepage": "https://github.com/xiaoqvan/fuyubot-plugins",
       "tags": [
         "mongodb",
+        "storage",
+        "database"
+      ]
+    },
+    {
+      "id": "fuyubot.sqlite",
+      "name": "SQLite Storage",
+      "summary": "给其它插件提供进程级 SQLite：参数化查询、表结构模板、事务批量写入，按插件隔离库文件。",
+      "repo": "xiaoqvan/fuyubot-plugins",
+      "latest": "0.1.1",
+      "versions": [
+        {
+          "version": "0.1.1",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.sqlite-0.1.1-windows-x86_64.zip",
+              "sha256": "d097d34bf59a15e8ec3ff22ed33961f6ba5fee53654c5baf59de587cb64b943a",
+              "size": 1125104
+            },
+            "windows-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.sqlite-0.1.1-windows-aarch64.zip",
+              "sha256": "c02eefed2078704a9bbaf6d5594a40e0802f4be1b36dca1ad92557ebac7c4b85",
+              "size": 999671
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.sqlite-0.1.1-linux-x86_64.zip",
+              "sha256": "feb73e3eccb090598511d5448cfc805b83d67f0c87995118cb28c2976b23cf10",
+              "size": 1416987
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.sqlite-0.1.1-macos-aarch64.zip",
+              "sha256": "bfe161a9a3838d7f02af7f18d3271950c51a44af2f0745cb83678d8779529ac9",
+              "size": 1207921
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.sqlite-0.1.1-linux-aarch64.zip",
+              "sha256": "af1d22d1368370df5ae99c1c145a81ab2f21522f01d3f63f46cd4048bb236f7a",
+              "size": 1351144
+            },
+            "android-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.sqlite-0.1.1-android-aarch64.zip",
+              "sha256": "5256844155f76b8c94d71c5bb6293d505fc778bbf5f95d68cca7e736f557757a",
+              "size": 1329644
+            },
+            "android-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.1/fuyubot.sqlite-0.1.1-android-x86_64.zip",
+              "sha256": "755a15fe27b36210663a2157a09f0824cf1977e39112d04feb5bd018af428b20",
+              "size": 1349069
+            }
+          },
+          "api": ">=0.1, <1.0",
+          "abi": 6
+        },
+        {
+          "version": "0.1.0",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-windows-x86_64.zip",
+              "sha256": "6405223a7cbec7f54c6721fba16b3a40865272bc279ca364e0110d738b906c00",
+              "size": 1124118
+            },
+            "windows-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-windows-aarch64.zip",
+              "sha256": "690fa0cfbf385da6e4a9e4b098a175896e702b7f1e0aaea4a2a6f9b943eb6dc0",
+              "size": 998751
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-linux-x86_64.zip",
+              "sha256": "71bd295d44a816ea0696319df88e8ef6ba94a1b6bed80020e6d2e21d9e681fe8",
+              "size": 1415962
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-macos-aarch64.zip",
+              "sha256": "487f4dcbf87397229056f2c10a8e706019356209dec452b25c42290616f2fd92",
+              "size": 1207340
+            },
+            "linux-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-linux-aarch64.zip",
+              "sha256": "c745c8fe0b05e1f55b93353eb7e6949945cdbd7308c1fcc7db742bc4a1487526",
+              "size": 1350179
+            },
+            "android-aarch64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-android-aarch64.zip",
+              "sha256": "69393943268ae14f28b51ac116fe17dc5d47ecf5f3b5341753d22948f8b10adf",
+              "size": 1328555
+            },
+            "android-x86_64": {
+              "url": "https://github.com/xiaoqvan/fuyubot-plugins/releases/download/v0.1.0/fuyubot.sqlite-0.1.0-android-x86_64.zip",
+              "sha256": "d60cd8d06c95a7756ec7f7489364f3f7c0ead9289cbf5e2d51d04ff94f95406b",
+              "size": 1347842
+            }
+          },
+          "api": ">=0.1, <1.0",
+          "abi": 5
+        }
+      ],
+      "description": "注册 `fuyubot.sqlite` 服务，所有方法 JSON 进、JSON 出：\ninfo / migrate / templates / execute / query / batch / tables。\n值一律走参数绑定，SQL 文本里只有占位符；SQLite 以 bundled 方式编入，运行时不依赖系统库。\n默认 per_plugin 模式（每个调用方插件一个库文件），也可以切成 shared 共用一份，\n模板表会自动加调用方前缀。\n",
+      "license": "MIT OR Apache-2.0",
+      "homepage": "https://github.com/xiaoqvan/fuyubot-plugins",
+      "tags": [
+        "sqlite",
         "storage",
         "database"
       ]
@@ -149,6 +538,55 @@
       "tags": [
         "music",
         "netease",
+        "card"
+      ]
+    },
+    {
+      "id": "whois",
+      "name": "Whois",
+      "summary": "查询域名 Whois 信息，渲染成信息卡片并以照片回复。",
+      "repo": "fengyegf/fuyubot-whois",
+      "latest": "0.1.1",
+      "versions": [
+        {
+          "version": "0.1.1",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-windows-x86_64.zip",
+              "sha256": "6f260d5dafe6b80b764807352aaea90784993a4ffba90da54640a21697aeebf0",
+              "size": 5718423
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-linux-x86_64.zip",
+              "sha256": "949218aef4783797346c130a1c0c024e93e069a5643f759d7bad4e805a21c660",
+              "size": 5820361
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-macos-aarch64.zip",
+              "sha256": "e703f78b281de503252085868e8a6122125ea901ccf5125a879bd4ea122eface",
+              "size": 5094256
+            },
+            "android-aarch64": {
+              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-android-aarch64.zip",
+              "sha256": "f681df294f51c67b122f9b188a29fb32e4f1ce13fa85e14118d453c1fae19c51",
+              "size": 5232241
+            },
+            "android-x86_64": {
+              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-android-x86_64.zip",
+              "sha256": "bcb4f5f1d95d6f9f11217df3e5e879e3e197fc407807065c5b6a0bc9e68fff16",
+              "size": 5720069
+            }
+          },
+          "abi": 5
+        }
+      ],
+      "description": "支持裸域名、完整 URL、端口、路径与中文域名，展示注册商、注册与到期时间、\n域名状态、DNS 服务器以及服务器 IP 归属；结果在本地渲染成 PNG 信息卡片，\n以照片回复触发消息。支持 Windows、Linux、macOS 与 Android AArch64/x86_64。\n",
+      "homepage": "https://github.com/fengyegf/fuyubot-whois",
+      "tags": [
+        "whois",
+        "domain",
         "card"
       ]
     }
