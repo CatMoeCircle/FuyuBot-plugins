@@ -7,14 +7,14 @@ description: |
 repo: fengyegf/fy-plugins
 homepage: https://github.com/fengyegf/fy-plugins
 tags: [epic, game, card]
-abi: 5
+abi: 6
 depends: []
 versions:
-  - version: 0.1.0
-    tag: epic-v0.1.0
+  - version: 0.1.1
+    tag: epic-v0.1.1
     assets:
-      windows-x86_64: epic-0.1.0-windows-x86_64.zip
-      linux-x86_64: epic-0.1.0-linux-x86_64.zip
-      macos-aarch64: epic-0.1.0-macos-aarch64.zip
-      android-aarch64: epic-0.1.0-android-aarch64.zip
-      android-x86_64: epic-0.1.0-android-x86_64.zip
+      windows-x86_64: epic-0.1.1-windows-x86_64.zip
+      linux-x86_64: epic-0.1.1-linux-x86_64.zip
+      macos-aarch64: epic-0.1.1-macos-aarch64.zip
+      android-aarch64: epic-0.1.1-android-aarch64.zip
+      android-x86_64: epic-0.1.1-android-x86_64.zip
