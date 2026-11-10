@@ -1,0 +1,21 @@
+id: kfc
+name: KFC
+summary: 抓一句肯德基疯话，渲染成推特卡片发回去。
+description: |
+  随机抓取肯德基疯狂星期四文案，带内联头像与 Nes 风格样式，渲染成推特卡片，
+  以照片回复触发消息。支持 Windows、Linux、macOS 与 Android AArch64/x86_64。
+repo: fengyegf/fy-plugins
+license: LGPL-3.0-or-later
+homepage: https://github.com/fengyegf/fy-plugins
+tags: [kfc, meme, card]
+abi: 5
+depends: []
+versions:
+  - version: 0.1.0
+    tag: kfc-v0.1.0
+    assets:
+      windows-x86_64: kfc-0.1.0-windows-x86_64.zip
+      linux-x86_64: kfc-0.1.0-linux-x86_64.zip
+      macos-aarch64: kfc-0.1.0-macos-aarch64.zip
+      android-aarch64: kfc-0.1.0-android-aarch64.zip
+      android-x86_64: kfc-0.1.0-android-x86_64.zip

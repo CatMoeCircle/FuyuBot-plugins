@@ -16,6 +16,7 @@ abi: 5
 depends: [fuyubot.help.commands]
 versions:
   - version: 1.2.0
+    # 单插件仓库用 v1.2.0；一个仓库多个插件时用 <id>-v1.2.0（如 whois-v0.1.0）。
     tag: v1.2.0
     yanked: false
     assets:

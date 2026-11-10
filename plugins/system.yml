@@ -1,0 +1,22 @@
+id: system
+name: System
+summary: 查看宿主机系统信息与机器人状态，渲染成信息卡片并以照片回复。
+description: |
+  展示 CPU、内存、磁盘、运行时长、TDLib 与机器人状态，支持背景图与头像合成，
+  结果在本地渲染成 JPEG 信息卡片，以照片回复触发消息。支持 Windows、Linux、
+  macOS 与 Android AArch64/x86_64。
+repo: fengyegf/fy-plugins
+license: LGPL-3.0-or-later
+homepage: https://github.com/fengyegf/fy-plugins
+tags: [system, status, card]
+abi: 5
+depends: []
+versions:
+  - version: 0.1.0
+    tag: system-v0.1.0
+    assets:
+      windows-x86_64: system-0.1.0-windows-x86_64.zip
+      linux-x86_64: system-0.1.0-linux-x86_64.zip
+      macos-aarch64: system-0.1.0-macos-aarch64.zip
+      android-aarch64: system-0.1.0-android-aarch64.zip
+      android-x86_64: system-0.1.0-android-x86_64.zip
