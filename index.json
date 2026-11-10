@@ -2,6 +2,55 @@
   "schema": 1,
   "plugins": [
     {
+      "id": "epic",
+      "name": "Epic",
+      "summary": "生成 Epic 免费游戏卡片并以照片回复消息。",
+      "repo": "fengyegf/fy-plugins",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/epic-v0.1.0/epic-0.1.0-windows-x86_64.zip",
+              "sha256": "aa13e666de0a105c90ec25206c34a0a155b8fa083f1c08818f3302c83b093855",
+              "size": 5881153
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/epic-v0.1.0/epic-0.1.0-linux-x86_64.zip",
+              "sha256": "902d716d3e025ff3c2e2ab0118c990fc60d8631ca42cf06bf56488aefeed7f33",
+              "size": 6142319
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/epic-v0.1.0/epic-0.1.0-macos-aarch64.zip",
+              "sha256": "cf170592e6487cceb471fad02b164437c480851d4b262780c3b9d18ff407055f",
+              "size": 5398049
+            },
+            "android-aarch64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/epic-v0.1.0/epic-0.1.0-android-aarch64.zip",
+              "sha256": "5459c358927f5d300d61ada97556786c39fe1492c16ffa0758e4909561e5749d",
+              "size": 5574757
+            },
+            "android-x86_64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/epic-v0.1.0/epic-0.1.0-android-x86_64.zip",
+              "sha256": "2512842a9765beec449100ede1ad6de1e7901fb220a1edbc94d9bd47fad0d6e6",
+              "size": 6049445
+            }
+          },
+          "abi": 5
+        }
+      ],
+      "description": "抓取 Epic 游戏商城当前的免费游戏列表，把本期免费作品渲染成信息卡片，\n以照片回复触发消息。支持 Windows、Linux、macOS 与 Android AArch64/x86_64。\n",
+      "homepage": "https://github.com/fengyegf/fy-plugins",
+      "tags": [
+        "epic",
+        "game",
+        "card"
+      ]
+    },
+    {
       "id": "fuyubot.adblock",
       "name": "Adblock",
       "summary": "广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核，命中即删除、禁言或封禁。",
@@ -493,10 +542,10 @@
       ]
     },
     {
-      "id": "musiccard",
-      "name": "MusicCard",
-      "summary": "生成网易云音乐卡片，并以照片回复命令消息。",
-      "repo": "fengyegf/fuyubot-musiccard",
+      "id": "kfc",
+      "name": "KFC",
+      "summary": "抓一句肯德基疯话，渲染成推特卡片发回去。",
+      "repo": "fengyegf/fy-plugins",
       "latest": "0.1.0",
       "versions": [
         {
@@ -505,36 +554,86 @@
           "yanked": false,
           "assets": {
             "windows-x86_64": {
-              "url": "https://github.com/fengyegf/fuyubot-musiccard/releases/download/v0.1.0/musiccard-0.1.0-windows-x86_64.zip",
-              "sha256": "5f25a3d9dd531da8e71e9a588733cb0511de597969ac4d4a13d6521255e763cc",
-              "size": 6630831
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/kfc-v0.1.0/kfc-0.1.0-windows-x86_64.zip",
+              "sha256": "afb32477a9c6e106b8c3376e6d1d46879729578cb3f466f24819d08cc61d249c",
+              "size": 5760551
             },
             "linux-x86_64": {
-              "url": "https://github.com/fengyegf/fuyubot-musiccard/releases/download/v0.1.0/musiccard-0.1.0-linux-x86_64.zip",
-              "sha256": "55230104ea8e6685548b4b023ae93f82be4693ebaeeb2654155ebcadbc3fcd1a",
-              "size": 7705159
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/kfc-v0.1.0/kfc-0.1.0-linux-x86_64.zip",
+              "sha256": "e1e15fcad4608a016534bc7cf6eb66bf8be3b718eb62bb54554a73a4bb655178",
+              "size": 6020577
             },
             "macos-aarch64": {
-              "url": "https://github.com/fengyegf/fuyubot-musiccard/releases/download/v0.1.0/musiccard-0.1.0-macos-aarch64.zip",
-              "sha256": "235d2be7dfca2161d9679fcf7bcc6b0746de09a49828832cbeb20f5dede0ea5d",
-              "size": 6806760
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/kfc-v0.1.0/kfc-0.1.0-macos-aarch64.zip",
+              "sha256": "451f545d093db8d1cb3cb2a533f2b3a3b00c81ec12125e35ada3da858ea68ada",
+              "size": 5287102
             },
             "android-aarch64": {
-              "url": "https://github.com/fengyegf/fuyubot-musiccard/releases/download/v0.1.0/musiccard-0.1.0-android-aarch64.zip",
-              "sha256": "bac2d2fd9cbc3f820217a7f5b67056951c69179f3b3075adef4661a04a07cc01",
-              "size": 7444175
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/kfc-v0.1.0/kfc-0.1.0-android-aarch64.zip",
+              "sha256": "6c035281e8b151e2f65236c08f3b66d6baaf93e6cdac2ade2eab60d0474455ce",
+              "size": 5462761
             },
             "android-x86_64": {
-              "url": "https://github.com/fengyegf/fuyubot-musiccard/releases/download/v0.1.0/musiccard-0.1.0-android-x86_64.zip",
-              "sha256": "082979e69d05a0f6291f76a3b9b66e5456f0b51e7e0eb37bd7d85257cc9a963e",
-              "size": 7611766
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/kfc-v0.1.0/kfc-0.1.0-android-x86_64.zip",
+              "sha256": "a6aa4abc105dbc1460459df904bf8840452b8d25195eed3ceb4283476113139d",
+              "size": 5926164
+            }
+          },
+          "abi": 5
+        }
+      ],
+      "description": "随机抓取肯德基疯狂星期四文案，带内联头像与 Nes 风格样式，渲染成推特卡片，\n以照片回复触发消息。支持 Windows、Linux、macOS 与 Android AArch64/x86_64。\n",
+      "license": "LGPL-3.0-or-later",
+      "homepage": "https://github.com/fengyegf/fy-plugins",
+      "tags": [
+        "kfc",
+        "meme",
+        "card"
+      ]
+    },
+    {
+      "id": "musiccard",
+      "name": "MusicCard",
+      "summary": "生成网易云音乐卡片，并以照片回复命令消息。",
+      "repo": "fengyegf/fy-plugins",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/musiccard-v0.1.0/musiccard-0.1.0-windows-x86_64.zip",
+              "sha256": "e22f8833b752c8f5861a9bb4ba9ea2574f729473e3707ce05dbb2ba757af3ceb",
+              "size": 5888397
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/musiccard-v0.1.0/musiccard-0.1.0-linux-x86_64.zip",
+              "sha256": "d76bc2739f1ef3ed5c78db8d5b63b26adc3c4df6bbdc6511e1f7ce970a1a47a4",
+              "size": 6171142
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/musiccard-v0.1.0/musiccard-0.1.0-macos-aarch64.zip",
+              "sha256": "7c184cb15eade69e22a72d5011d6eb464d1ac1efd20b483704de3fb2d434c0cf",
+              "size": 5431591
+            },
+            "android-aarch64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/musiccard-v0.1.0/musiccard-0.1.0-android-aarch64.zip",
+              "sha256": "34d1528a79378d3536f2e471deeb7e67c1eedc0e508ee6fc6f1d32c34c1c4291",
+              "size": 5613099
+            },
+            "android-x86_64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/musiccard-v0.1.0/musiccard-0.1.0-android-x86_64.zip",
+              "sha256": "c2b19d2da115af52f585963bdf36dd5132a80ef560b0c0c96b994c0ab877f333",
+              "size": 6078152
             }
           },
           "abi": 5
         }
       ],
       "description": "支持通过歌曲 ID、网易云歌曲链接或关键词查询歌曲，获取封面、歌词与译文，\n生成包含歌曲信息、歌词、日期和二维码的卡片图。支持 Windows、Linux、macOS\n与 Android AArch64/x86_64。\n",
-      "homepage": "https://github.com/fengyegf/fuyubot-musiccard",
+      "homepage": "https://github.com/fengyegf/fy-plugins",
       "tags": [
         "music",
         "netease",
@@ -542,48 +641,137 @@
       ]
     },
     {
-      "id": "whois",
-      "name": "Whois",
-      "summary": "查询域名 Whois 信息，渲染成信息卡片并以照片回复。",
-      "repo": "fengyegf/fuyubot-whois",
-      "latest": "0.1.1",
+      "id": "ppxfy",
+      "name": "PPXFY",
+      "summary": "从 DMM / DLSite 下载并解压作品，附带记录与 Telegraph 上传。",
+      "repo": "fengyegf/fy-plugins",
+      "latest": "0.1.0",
       "versions": [
         {
-          "version": "0.1.1",
+          "version": "0.1.0",
           "depends": [],
           "yanked": false,
           "assets": {
             "windows-x86_64": {
-              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-windows-x86_64.zip",
-              "sha256": "6f260d5dafe6b80b764807352aaea90784993a4ffba90da54640a21697aeebf0",
-              "size": 5718423
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/ppxfy-v0.1.0/ppxfy-0.1.0-windows-x86_64.zip",
+              "sha256": "6cd36c70b53506fe59c6f4133406d90e3922a8cdafd12db727673a600e483545",
+              "size": 3001691
             },
             "linux-x86_64": {
-              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-linux-x86_64.zip",
-              "sha256": "949218aef4783797346c130a1c0c024e93e069a5643f759d7bad4e805a21c660",
-              "size": 5820361
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/ppxfy-v0.1.0/ppxfy-0.1.0-linux-x86_64.zip",
+              "sha256": "663f2b0685f74a488bedf8bb5dbfd54bd7eb43c6a6420727c4a8140d1eac4c85",
+              "size": 3135691
             },
             "macos-aarch64": {
-              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-macos-aarch64.zip",
-              "sha256": "e703f78b281de503252085868e8a6122125ea901ccf5125a879bd4ea122eface",
-              "size": 5094256
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/ppxfy-v0.1.0/ppxfy-0.1.0-macos-aarch64.zip",
+              "sha256": "c241c0385bb0100cc1af3698a1053fb13e0ae07fd4741d02c762be231ed3eff0",
+              "size": 2685046
+            }
+          },
+          "abi": 5
+        }
+      ],
+      "description": "支持 DMM / DLSite 链接解析、分卷下载、就地解压与乱码文件名修复，可生成\nTelegraph 预览页并把 Galgame 记录写入 storage.mongo（软依赖）。支持 Windows、\nLinux 与 macOS。\n",
+      "homepage": "https://github.com/fengyegf/fy-plugins",
+      "tags": [
+        "dmm",
+        "dlsite",
+        "download"
+      ]
+    },
+    {
+      "id": "system",
+      "name": "System",
+      "summary": "查看宿主机系统信息与机器人状态，渲染成信息卡片并以照片回复。",
+      "repo": "fengyegf/fy-plugins",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.0/system-0.1.0-windows-x86_64.zip",
+              "sha256": "c0969bcf8a4d0e68b7eb76513350027aa17cd67e42cf91eb65e665504286c5ce",
+              "size": 5913907
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.0/system-0.1.0-linux-x86_64.zip",
+              "sha256": "06297d4eeff1184ba1a8537f0a09c8491dffbe8342ba10a6d3e2bf45c4cda4af",
+              "size": 6199801
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.0/system-0.1.0-macos-aarch64.zip",
+              "sha256": "adec2ac8e5e8c40d896d01af986d1b54754e9354217cc477251a939ebbf399b1",
+              "size": 5415587
             },
             "android-aarch64": {
-              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-android-aarch64.zip",
-              "sha256": "f681df294f51c67b122f9b188a29fb32e4f1ce13fa85e14118d453c1fae19c51",
-              "size": 5232241
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.0/system-0.1.0-android-aarch64.zip",
+              "sha256": "f6a6f0abed2776ceb59c26256d7eed590c5d777619a3ea6085352dc6f23df539",
+              "size": 5632800
             },
             "android-x86_64": {
-              "url": "https://github.com/fengyegf/fuyubot-whois/releases/download/v0.1.1/whois-0.1.1-android-x86_64.zip",
-              "sha256": "bcb4f5f1d95d6f9f11217df3e5e879e3e197fc407807065c5b6a0bc9e68fff16",
-              "size": 5720069
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.0/system-0.1.0-android-x86_64.zip",
+              "sha256": "fd0eb228601e56113986df28a8cf3d33c3ed9364b24b0e703c0491202dd5233f",
+              "size": 6105021
+            }
+          },
+          "abi": 5
+        }
+      ],
+      "description": "展示 CPU、内存、磁盘、运行时长、TDLib 与机器人状态，支持背景图与头像合成，\n结果在本地渲染成 JPEG 信息卡片，以照片回复触发消息。支持 Windows、Linux、\nmacOS 与 Android AArch64/x86_64。\n",
+      "license": "LGPL-3.0-or-later",
+      "homepage": "https://github.com/fengyegf/fy-plugins",
+      "tags": [
+        "system",
+        "status",
+        "card"
+      ]
+    },
+    {
+      "id": "whois",
+      "name": "Whois",
+      "summary": "查询域名 Whois 信息，渲染成信息卡片并以照片回复。",
+      "repo": "fengyegf/fy-plugins",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "depends": [],
+          "yanked": false,
+          "assets": {
+            "windows-x86_64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/whois-v0.1.0/whois-0.1.0-windows-x86_64.zip",
+              "sha256": "683010a43b130202a71bf3f56bc0af3ac1f8415e2009bc0f5598ee8d63eef1d7",
+              "size": 5895093
+            },
+            "linux-x86_64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/whois-v0.1.0/whois-0.1.0-linux-x86_64.zip",
+              "sha256": "f7f039a5fe7abd7ea14f5e9137f5a8775c99175dd1abfc9e216530e8d631dfd2",
+              "size": 6152583
+            },
+            "macos-aarch64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/whois-v0.1.0/whois-0.1.0-macos-aarch64.zip",
+              "sha256": "5c701f1114a2c62601a13add9945aed55806f715e22c1d578dc9d6a6c5518789",
+              "size": 5408593
+            },
+            "android-aarch64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/whois-v0.1.0/whois-0.1.0-android-aarch64.zip",
+              "sha256": "34df5ac241fc0e73257ea43c8c59cf4bc4f286ed99a7c8d2f35d1f8d7568d93a",
+              "size": 5590316
+            },
+            "android-x86_64": {
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/whois-v0.1.0/whois-0.1.0-android-x86_64.zip",
+              "sha256": "77d17035375075ae366592a2cc0aa0ab61786980f81c34646f3651a1268f5f0d",
+              "size": 6056396
             }
           },
           "abi": 5
         }
       ],
       "description": "支持裸域名、完整 URL、端口、路径与中文域名，展示注册商、注册与到期时间、\n域名状态、DNS 服务器以及服务器 IP 归属；结果在本地渲染成 PNG 信息卡片，\n以照片回复触发消息。支持 Windows、Linux、macOS 与 Android AArch64/x86_64。\n",
-      "homepage": "https://github.com/fengyegf/fuyubot-whois",
+      "homepage": "https://github.com/fengyegf/fy-plugins",
       "tags": [
         "whois",
         "domain",
