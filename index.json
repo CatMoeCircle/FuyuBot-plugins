@@ -684,37 +684,37 @@
       "name": "System",
       "summary": "查看宿主机系统信息与机器人状态，渲染成信息卡片并以照片回复。",
       "repo": "fengyegf/fy-plugins",
-      "latest": "0.1.1",
+      "latest": "0.1.2",
       "versions": [
         {
-          "version": "0.1.1",
+          "version": "0.1.2",
           "depends": [],
           "yanked": false,
           "assets": {
             "windows-x86_64": {
-              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.1/system-0.1.1-windows-x86_64.zip",
-              "sha256": "6ff101b77f300a2bbdab02362bcc7f71d5964885df9e4b272519b43f8913b7b4",
-              "size": 5914685
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.2/system-0.1.2-windows-x86_64.zip",
+              "sha256": "fe966c9ac5e4850d16425d957b6ff4d02866f8e20db6127e3e6569c523b4681f",
+              "size": 5919094
             },
             "linux-x86_64": {
-              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.1/system-0.1.1-linux-x86_64.zip",
-              "sha256": "946669aa1c472ffca7f27cfefba3cdbeb990f3509999532e83e3bd8e8fc68165",
-              "size": 6200381
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.2/system-0.1.2-linux-x86_64.zip",
+              "sha256": "900182f20600c3936ca400a92241e064f12698e2670432570ab62f30f3d8be0e",
+              "size": 6206496
             },
             "macos-aarch64": {
-              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.1/system-0.1.1-macos-aarch64.zip",
-              "sha256": "eef8d01af1504639a05f3f13ee5bccfb9872d779a9e88b9ac96cd85e1fa76f8d",
-              "size": 5415886
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.2/system-0.1.2-macos-aarch64.zip",
+              "sha256": "ba00da6b99e5d759595b1d72301380089db11200f1c0acbab063bbae50294497",
+              "size": 5423128
             },
             "android-aarch64": {
-              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.1/system-0.1.1-android-aarch64.zip",
-              "sha256": "8d70b8d755d74199525b7bd85deaa9da82331db9130c0ed4d19b69efdebde338",
-              "size": 5633538
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.2/system-0.1.2-android-aarch64.zip",
+              "sha256": "a5ed3cb9a95263436bf09fddd586e3073a6ce0aa136a8708585a4cff1e8fed7d",
+              "size": 5639882
             },
             "android-x86_64": {
-              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.1/system-0.1.1-android-x86_64.zip",
-              "sha256": "88365e55c7dfd0084eef8dc35819ad599993166578aed40e05a784697e13cbc4",
-              "size": 6105506
+              "url": "https://github.com/fengyegf/fy-plugins/releases/download/system-v0.1.2/system-0.1.2-android-x86_64.zip",
+              "sha256": "edea5593424a2a1df4e52fc5a4491fc9c68abf610bd98d201c157993b7afaa17",
+              "size": 6112019
             }
           },
           "abi": 6
