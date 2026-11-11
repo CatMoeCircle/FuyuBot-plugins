@@ -12,11 +12,11 @@ tags: [system, status, card]
 abi: 6
 depends: []
 versions:
-  - version: 0.1.1
-    tag: system-v0.1.1
+  - version: 0.1.2
+    tag: system-v0.1.2
     assets:
-      windows-x86_64: system-0.1.1-windows-x86_64.zip
-      linux-x86_64: system-0.1.1-linux-x86_64.zip
-      macos-aarch64: system-0.1.1-macos-aarch64.zip
-      android-aarch64: system-0.1.1-android-aarch64.zip
-      android-x86_64: system-0.1.1-android-x86_64.zip
+      windows-x86_64: system-0.1.2-windows-x86_64.zip
+      linux-x86_64: system-0.1.2-linux-x86_64.zip
+      macos-aarch64: system-0.1.2-macos-aarch64.zip
+      android-aarch64: system-0.1.2-android-aarch64.zip
+      android-x86_64: system-0.1.2-android-x86_64.zip
