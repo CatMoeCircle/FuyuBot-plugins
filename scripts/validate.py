@@ -14,7 +14,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from registry import RegistryError, build_index, entry_paths, load_entry  # noqa: E402
+from registry import (  # noqa: E402
+    RegistryError,
+    build_index,
+    build_shards,
+    entry_paths,
+    load_entry,
+)
 
 
 def main() -> int:
@@ -36,11 +42,13 @@ def main() -> int:
     try:
         entries = [load_entry(path) for path in paths]
         index = build_index(entries)
+        shards = build_shards(entries)
     except RegistryError as exc:
         print(f"[ERR] {exc}", file=sys.stderr)
         return 1
 
-    for plugin in index["plugins"]:
+    for entry_id in sorted(shards):
+        plugin = shards[entry_id]["plugin"]
         print(f"[OK] {plugin['id']} latest={plugin['latest']}")
         for version in plugin["versions"]:
             assets = ", ".join(
