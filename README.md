@@ -90,14 +90,15 @@ registry_url = "https://catmoecircle.github.io/FuyuBot-plugins/index.json"
 
 ## 收录一个插件
 
-1. 在插件仓库打 tag `v<版本>`（例如 `v1.2.0`），上传按契约打的 zip：
+1. 在插件仓库打 tag（单插件仓用 `v<版本>`，例如 `v1.2.0`；一个仓库多个插件时用
+   `<id>-v<版本>`，例如 `whois-v0.1.0`），上传按契约打的 zip：
    - 资产名：`<id>-<version>-<os>-<arch>.zip`，纯脚本用 `-any.zip`；
    - **zip 根就是插件目录内容**（`plugin.json` 在根，不套一层）；
    - `plugin.json` 的 `id` / `version` 必须和收录条目 / tag 一致；
    - 不带 `node_modules/`、`.venv/`、`target/`、`.git/`，不带符号链接。
 2. 复制 [`plugins/_template.yml`](plugins/_template.yml) 为 `plugins/<id>.yml`，填：
    - `id`、`name`、`summary`、`repo`（`owner/repo`）、`versions`；
-   - 每个版本写 `version`、`tag: v<version>`、`assets: {平台: 资产文件名}`。
+   - 每个版本写 `version`、`tag`（与上一步的 tag 一致）、`assets: {平台: 资产文件名}`。
 3. 开 PR。CI 会下载资产、验 zip / `plugin.json` / sha256 / 平台 / 入口，并试构建索引。
 4. 合并到 `main` 后，`publish-index` 重新生成 `index.json` + 分片 + 目录页并部署 Pages。
 

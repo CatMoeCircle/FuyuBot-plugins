@@ -216,8 +216,12 @@ def load_entry(path: Path) -> dict[str, Any]:
         except InvalidVersion as exc:
             raise RegistryError(f"{path}: 版本 {version!r} 不是 semver（{exc}）") from exc
         tag = item.get("tag")
-        if tag != f"v{version}":
-            raise RegistryError(f"{path}: tag 必须是 v{version}（当前 {tag!r}）")
+        # 单插件仓库用 v<version>；一个仓库多个插件时用 <id>-v<version> 区分。
+        allowed_tags = {f"v{version}", f"{entry_id}-v{version}"}
+        if tag not in allowed_tags:
+            raise RegistryError(
+                f"{path}: tag 必须是 v{version} 或 {entry_id}-v{version}（当前 {tag!r}）"
+            )
         assets = item.get("assets")
         if not isinstance(assets, dict) or not assets:
             raise RegistryError(f"{path}: {version} 的 assets 不能为空")

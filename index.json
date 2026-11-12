@@ -2,6 +2,29 @@
   "schema": 2,
   "plugins": [
     {
+      "id": "epic",
+      "name": "Epic",
+      "summary": "生成 Epic 免费游戏卡片并以照片回复消息。",
+      "latest": "0.1.1",
+      "detail": "plugins/epic.json",
+      "repo": "fengyegf/fy-plugins",
+      "tags": [
+        "epic",
+        "game",
+        "card"
+      ],
+      "abis": [
+        6
+      ],
+      "platform_min_abi": {
+        "windows-x86_64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
+      }
+    },
+    {
       "id": "fuyubot.adblock",
       "name": "Adblock",
       "summary": "广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核，命中即删除、禁言或封禁。",
@@ -135,26 +158,93 @@
       }
     },
     {
+      "id": "kfc",
+      "name": "KFC",
+      "summary": "抓一句肯德基疯话，渲染成推特卡片发回去。",
+      "latest": "0.1.1",
+      "detail": "plugins/kfc.json",
+      "repo": "fengyegf/fy-plugins",
+      "tags": [
+        "kfc",
+        "meme",
+        "card"
+      ],
+      "abis": [
+        6
+      ],
+      "platform_min_abi": {
+        "windows-x86_64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
+      }
+    },
+    {
       "id": "musiccard",
       "name": "MusicCard",
       "summary": "生成网易云音乐卡片，并以照片回复命令消息。",
-      "latest": "0.1.0",
+      "latest": "0.1.1",
       "detail": "plugins/musiccard.json",
-      "repo": "fengyegf/fuyubot-musiccard",
+      "repo": "fengyegf/fy-plugins",
       "tags": [
         "music",
         "netease",
         "card"
       ],
       "abis": [
-        5
+        6
       ],
       "platform_min_abi": {
-        "windows-x86_64": 5,
-        "linux-x86_64": 5,
-        "macos-aarch64": 5,
-        "android-aarch64": 5,
-        "android-x86_64": 5
+        "windows-x86_64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
+      }
+    },
+    {
+      "id": "ppxfy",
+      "name": "PPXFY",
+      "summary": "从 DMM / DLSite 下载并解压作品，附带记录与 Telegraph 上传。",
+      "latest": "0.1.1",
+      "detail": "plugins/ppxfy.json",
+      "repo": "fengyegf/fy-plugins",
+      "tags": [
+        "dmm",
+        "dlsite",
+        "download"
+      ],
+      "abis": [
+        6
+      ],
+      "platform_min_abi": {
+        "windows-x86_64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6
+      }
+    },
+    {
+      "id": "system",
+      "name": "System",
+      "summary": "查看宿主机系统信息与机器人状态，渲染成信息卡片并以照片回复。",
+      "latest": "0.1.2",
+      "detail": "plugins/system.json",
+      "repo": "fengyegf/fy-plugins",
+      "tags": [
+        "system",
+        "status",
+        "card"
+      ],
+      "abis": [
+        6
+      ],
+      "platform_min_abi": {
+        "windows-x86_64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
       }
     },
     {
@@ -163,21 +253,21 @@
       "summary": "查询域名 Whois 信息，渲染成信息卡片并以照片回复。",
       "latest": "0.1.1",
       "detail": "plugins/whois.json",
-      "repo": "fengyegf/fuyubot-whois",
+      "repo": "fengyegf/fy-plugins",
       "tags": [
         "whois",
         "domain",
         "card"
       ],
       "abis": [
-        5
+        6
       ],
       "platform_min_abi": {
-        "windows-x86_64": 5,
-        "linux-x86_64": 5,
-        "macos-aarch64": 5,
-        "android-aarch64": 5,
-        "android-x86_64": 5
+        "windows-x86_64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
       }
     }
   ]

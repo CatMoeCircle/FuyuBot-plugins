@@ -1,0 +1,19 @@
+id: ppxfy
+name: PPXFY
+summary: 从 DMM / DLSite 下载并解压作品，附带记录与 Telegraph 上传。
+description: |
+  支持 DMM / DLSite 链接解析、分卷下载、就地解压与乱码文件名修复，可生成
+  Telegraph 预览页并把 Galgame 记录写入 storage.mongo（软依赖）。支持 Windows、
+  Linux 与 macOS。
+repo: fengyegf/fy-plugins
+homepage: https://github.com/fengyegf/fy-plugins
+tags: [dmm, dlsite, download]
+abi: 6
+depends: []
+versions:
+  - version: 0.1.1
+    tag: ppxfy-v0.1.1
+    assets:
+      windows-x86_64: ppxfy-0.1.1-windows-x86_64.zip
+      linux-x86_64: ppxfy-0.1.1-linux-x86_64.zip
+      macos-aarch64: ppxfy-0.1.1-macos-aarch64.zip
