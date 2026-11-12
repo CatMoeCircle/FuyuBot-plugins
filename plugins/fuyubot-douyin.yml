@@ -1,0 +1,27 @@
+id: fuyubot.douyin
+name: Douyin Parser
+summary: 抖音解析：/dy 命令与聊天里的分享链接，发去水印视频 / 图集，可选 SQLite 缓存文件 id。
+description: |
+  聊天里出现 douyin.com / iesdouyin.com 链接时自动解析，也可以显式 `/dy <链接>`。
+  走抖音 detail API（原生签名）取最高清晰度；接口失败时退回分享页 SSR。
+  视频 / 图集按回退顺序发送，不引用原消息；可选 `fuyubot.sqlite` 缓存 TDLib 文件 id，
+  同一个作品第二次直接按文件 id 重发，不再解析、不再下载。
+  纯 Rust，内置 tokio runtime 与 reqwest（rustls），不依赖 Chromium / Node。
+repo: xiaoqvan/fuyubot-plugins
+license: MIT OR Apache-2.0
+homepage: https://github.com/xiaoqvan/fuyubot-plugins/tree/main/crates/fuyubot-plugin-douyin
+tags: [douyin, video, download, telegram]
+api: ">=0.1.4, <1.0"
+abi: 6
+depends: []
+versions:
+  - version: 0.1.2
+    tag: fuyubot.douyin-v0.1.2
+    assets:
+      windows-x86_64: fuyubot.douyin-0.1.2-windows-x86_64.zip
+      windows-aarch64: fuyubot.douyin-0.1.2-windows-aarch64.zip
+      linux-x86_64: fuyubot.douyin-0.1.2-linux-x86_64.zip
+      macos-aarch64: fuyubot.douyin-0.1.2-macos-aarch64.zip
+      linux-aarch64: fuyubot.douyin-0.1.2-linux-aarch64.zip
+      android-aarch64: fuyubot.douyin-0.1.2-android-aarch64.zip
+      android-x86_64: fuyubot.douyin-0.1.2-android-x86_64.zip

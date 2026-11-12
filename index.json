@@ -28,7 +28,7 @@
       "id": "fuyubot.adblock",
       "name": "Adblock",
       "summary": "广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核，命中即删除、禁言或封禁。",
-      "latest": "0.1.1",
+      "latest": "0.1.2",
       "detail": "plugins/fuyubot.adblock.json",
       "repo": "xiaoqvan/fuyubot-plugins",
       "tags": [
@@ -52,10 +52,36 @@
       }
     },
     {
+      "id": "fuyubot.douyin",
+      "name": "Douyin Parser",
+      "summary": "抖音解析：/dy 命令与聊天里的分享链接，发去水印视频 / 图集，可选 SQLite 缓存文件 id。",
+      "latest": "0.1.2",
+      "detail": "plugins/fuyubot.douyin.json",
+      "repo": "xiaoqvan/fuyubot-plugins",
+      "tags": [
+        "douyin",
+        "video",
+        "download",
+        "telegram"
+      ],
+      "abis": [
+        6
+      ],
+      "platform_min_abi": {
+        "windows-x86_64": 6,
+        "windows-aarch64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6,
+        "linux-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
+      }
+    },
+    {
       "id": "fuyubot.help",
       "name": "Help (Image)",
-      "summary": "替代框架内置 /help：命令表按插件分组渲染成图片（/help text 出文字版），与内置 help 同 id。",
-      "latest": "0.1.1",
+      "summary": "替代框架内置 /help：读取宿主命令表并按插件分组渲染成图片（/help text 出文字版），与内置 help 同 id。",
+      "latest": "0.1.3",
       "detail": "plugins/fuyubot.help.json",
       "repo": "xiaoqvan/fuyubot-plugins",
       "tags": [
@@ -81,7 +107,7 @@
       "id": "fuyubot.html2img",
       "name": "HTML to Image",
       "summary": "HTML / Vue 转图片服务：渲染成 PNG / JPEG 并返回本地文件路径，不接收聊天消息。",
-      "latest": "0.1.1",
+      "latest": "0.1.2",
       "detail": "plugins/fuyubot.html2img.json",
       "repo": "xiaoqvan/fuyubot-plugins",
       "tags": [
@@ -106,10 +132,35 @@
       }
     },
     {
+      "id": "fuyubot.message-log",
+      "name": "Message Log",
+      "summary": "消息日志：把新消息拼成一行交给宿主日志（控制台 / 日志页 / logs/fuyubot.log）。",
+      "latest": "0.1.1",
+      "detail": "plugins/fuyubot.message-log.json",
+      "repo": "xiaoqvan/fuyubot-plugins",
+      "tags": [
+        "log",
+        "message",
+        "telegram"
+      ],
+      "abis": [
+        6
+      ],
+      "platform_min_abi": {
+        "windows-x86_64": 6,
+        "windows-aarch64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6,
+        "linux-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
+      }
+    },
+    {
       "id": "fuyubot.mongo",
       "name": "MongoDB Storage",
       "summary": "给任意插件提供 storage.mongo：集合级 JSON CRUD、聚合与索引管理。",
-      "latest": "0.1.1",
+      "latest": "0.1.2",
       "detail": "plugins/fuyubot.mongo.json",
       "repo": "xiaoqvan/fuyubot-plugins",
       "tags": [
@@ -132,10 +183,37 @@
       }
     },
     {
+      "id": "fuyubot.music",
+      "name": "Music Parser",
+      "summary": "网易云 / 汽水音乐：/music163、/soda 搜索与解析，按音质发音频（汽水 UGC 发视频）。",
+      "latest": "0.1.2",
+      "detail": "plugins/fuyubot.music.json",
+      "repo": "xiaoqvan/fuyubot-plugins",
+      "tags": [
+        "music",
+        "netease",
+        "qishui",
+        "audio",
+        "telegram"
+      ],
+      "abis": [
+        6
+      ],
+      "platform_min_abi": {
+        "windows-x86_64": 6,
+        "windows-aarch64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6,
+        "linux-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
+      }
+    },
+    {
       "id": "fuyubot.sqlite",
       "name": "SQLite Storage",
       "summary": "给其它插件提供进程级 SQLite：参数化查询、表结构模板、事务批量写入，按插件隔离库文件。",
-      "latest": "0.1.1",
+      "latest": "0.1.2",
       "detail": "plugins/fuyubot.sqlite.json",
       "repo": "xiaoqvan/fuyubot-plugins",
       "tags": [

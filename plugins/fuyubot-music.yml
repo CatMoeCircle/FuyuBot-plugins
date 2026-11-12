@@ -1,0 +1,27 @@
+id: fuyubot.music
+name: Music Parser
+summary: 网易云 / 汽水音乐：/music163、/soda 搜索与解析，按音质发音频（汽水 UGC 发视频）。
+description: |
+  搜索、解析分享链接、按指定音质发音频：网易云走 eapi（AES-128-ECB + MD5），
+  汽水音乐走 `play_auth` + CENC（AES-128-CTR）。聊天里的 music.163.com / 163cn.tv /
+  qishui.com / qishui.douyin.com 链接会自动识别；汽水 UGC 视频按视频发送。
+  可选 `fuyubot.sqlite` 缓存「音乐 id + 音质 → TDLib 文件 id」，重复点歌不再下载。
+  全异步：插件自带 tokio 多线程 runtime，HTTP 走 reqwest（rustls），下载流式落盘。
+repo: xiaoqvan/fuyubot-plugins
+license: MIT OR Apache-2.0
+homepage: https://github.com/xiaoqvan/fuyubot-plugins/tree/main/crates/fuyubot-plugin-music
+tags: [music, netease, qishui, audio, telegram]
+api: ">=0.1.4, <1.0"
+abi: 6
+depends: []
+versions:
+  - version: 0.1.2
+    tag: fuyubot.music-v0.1.2
+    assets:
+      windows-x86_64: fuyubot.music-0.1.2-windows-x86_64.zip
+      windows-aarch64: fuyubot.music-0.1.2-windows-aarch64.zip
+      linux-x86_64: fuyubot.music-0.1.2-linux-x86_64.zip
+      macos-aarch64: fuyubot.music-0.1.2-macos-aarch64.zip
+      linux-aarch64: fuyubot.music-0.1.2-linux-aarch64.zip
+      android-aarch64: fuyubot.music-0.1.2-android-aarch64.zip
+      android-x86_64: fuyubot.music-0.1.2-android-x86_64.zip
