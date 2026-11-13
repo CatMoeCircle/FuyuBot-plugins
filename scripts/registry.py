@@ -272,70 +272,131 @@ def load_entry(path: Path) -> dict[str, Any]:
     }
 
 
-def build_index(entries: list[dict[str, Any]]) -> dict[str, Any]:
+def detail_path(entry_id: str) -> str:
+    """明细分片相对索引的路径（协议固定：`plugins/<id>.json`）。"""
+    return f"plugins/{entry_id}.json"
+
+
+def _by_id(entries: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     by_id: dict[str, dict[str, Any]] = {}
     for entry in entries:
         if entry["id"] in by_id:
             raise RegistryError(f"id 重复：{entry['id']}")
         by_id[entry["id"]] = entry
+    return by_id
 
+
+def _plugin_detail(entry_id: str, entry: dict[str, Any]) -> dict[str, Any]:
+    """一个插件的完整条目（写进 `plugins/<id>.json`）。
+
+    `versions` **按版本号升序**：商店客户端从后往前找「最新的可用版本」，
+    这个顺序是客户端与索引之间的契约，别改。
+    """
+    versions = sorted(entry["versions"], key=lambda item: Version(item["version"]))
+    usable = [item for item in versions if not item["yanked"]]
+    if not usable:
+        raise RegistryError(f"{entry_id}: 所有版本都被 yanked，至少留一个可用版本")
+    latest = usable[-1]["version"]
+
+    # 版本级 abi/depends 优先用包内 manifest；没有就退回条目级。
+    version_rows = []
+    for item in versions:
+        assets = {}
+        abi = entry.get("abi")
+        depends = entry.get("depends") or []
+        for platform, asset in item["assets"].items():
+            assets[platform] = {
+                "url": asset["url"],
+                "sha256": asset["sha256"],
+                "size": asset["size"],
+            }
+            if asset["_abi"] is not None:
+                abi = asset["_abi"]
+            if asset["_depends"]:
+                depends = asset["_depends"]
+        row = {
+            "version": item["version"],
+            "depends": depends,
+            "yanked": item["yanked"],
+            "assets": assets,
+        }
+        if entry.get("api"):
+            row["api"] = entry["api"]
+        if abi is not None:
+            row["abi"] = abi
+        version_rows.append(row)
+
+    plugin: dict[str, Any] = {
+        "id": entry_id,
+        "name": entry["name"],
+        "summary": entry["summary"],
+        "repo": entry["repo"],
+        "latest": latest,
+        "versions": version_rows,
+    }
+    for key in ("description", "license", "homepage"):
+        if entry[key]:
+            plugin[key] = entry[key]
+    if entry["tags"]:
+        plugin["tags"] = entry["tags"]
+    return plugin
+
+
+def build_index(entries: list[dict[str, Any]]) -> dict[str, Any]:
+    """schema 2 的**轻索引**：只放列表需要的字段 + 明细分片地址。
+
+    主文件大小与插件数量线性相关但常数很小（一条 ~150B）；描述、版本表、
+    每平台资产都在 `plugins/<id>.json` 里按需拉取。
+    """
+    by_id = _by_id(entries)
     plugins: list[dict[str, Any]] = []
     for entry_id in sorted(by_id):
-        entry = by_id[entry_id]
-        versions = sorted(
-            entry["versions"],
-            key=lambda item: Version(item["version"]),
-            reverse=True,
-        )
-        usable = [item for item in versions if not item["yanked"]]
-        if not usable:
-            raise RegistryError(f"{entry_id}: 所有版本都被 yanked，至少留一个可用版本")
-        latest = usable[0]["version"]
-
-        # 版本级 abi/depends 优先用包内 manifest；没有就退回条目级。
-        version_rows = []
-        for item in versions:
-            assets = {}
-            abi = entry.get("abi")
-            depends = entry.get("depends") or []
-            for platform, asset in item["assets"].items():
-                assets[platform] = {
-                    "url": asset["url"],
-                    "sha256": asset["sha256"],
-                    "size": asset["size"],
-                }
-                if asset["_abi"] is not None:
-                    abi = asset["_abi"]
-                if asset["_depends"]:
-                    depends = asset["_depends"]
-            row = {
-                "version": item["version"],
-                "depends": depends,
-                "yanked": item["yanked"],
-                "assets": assets,
-            }
-            if entry.get("api"):
-                row["api"] = entry["api"]
-            if abi is not None:
-                row["abi"] = abi
-            version_rows.append(row)
-
-        plugin: dict[str, Any] = {
+        detail = _plugin_detail(entry_id, by_id[entry_id])
+        row: dict[str, Any] = {
             "id": entry_id,
-            "name": entry["name"],
-            "summary": entry["summary"],
-            "repo": entry["repo"],
-            "latest": latest,
-            "versions": version_rows,
+            "name": detail["name"],
+            "summary": detail.get("summary", ""),
+            "latest": detail["latest"],
+            "detail": detail_path(entry_id),
         }
-        for key in ("description", "license", "homepage"):
-            if entry[key]:
-                plugin[key] = entry[key]
-        if entry["tags"]:
-            plugin["tags"] = entry["tags"]
-        plugins.append(plugin)
+        if detail.get("repo"):
+            row["repo"] = detail["repo"]
+        if detail.get("tags"):
+            row["tags"] = detail["tags"]
+        # 目录页 / 商店筛选用摘要：不展开分片也能判断「这个宿主能不能装」。
+        # `platform_min_abi`：平台 → 该平台可用版本里最低的 ABI（0 = 版本没声明 ABI）。
+        # 客户端拿它和本机 ABI 比，比 `abis`/`platforms` 两个独立集合更准。
+        usable = [version for version in detail["versions"] if not version["yanked"]]
+        abis = sorted(
+            {version["abi"] for version in usable if version.get("abi") is not None}
+        )
+        platform_min_abi: dict[str, int] = {}
+        for version in usable:
+            abi = version.get("abi")
+            value = 0 if abi is None else abi
+            for platform in version["assets"]:
+                previous = platform_min_abi.get(platform)
+                if previous is None:
+                    platform_min_abi[platform] = value
+                elif previous == 0 or value == 0:
+                    platform_min_abi[platform] = 0
+                else:
+                    platform_min_abi[platform] = min(previous, value)
+        if abis:
+            row["abis"] = abis
+        if platform_min_abi:
+            row["platform_min_abi"] = platform_min_abi
+        plugins.append(row)
+    return {"schema": 2, "plugins": plugins}
 
-    return {"schema": 1, "plugins": plugins}
+
+def build_shards(entries: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    """每个插件一份明细分片：`id → {"schema": 2, "plugin": {…}}`。"""
+    by_id = _by_id(entries)
+    return {
+        entry_id: {"schema": 2, "plugin": _plugin_detail(entry_id, by_id[entry_id])}
+        for entry_id in sorted(by_id)
+    }
 
 
 def entry_paths(root: Path, explicit: list[str]) -> list[Path]:

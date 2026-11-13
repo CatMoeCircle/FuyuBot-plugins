@@ -30,17 +30,17 @@ jobs:
           cache: pip
       - name: Install
         run: pip install -r scripts/requirements.txt
-      - name: Build index
-        run: python scripts/build_index.py --output index.json
+      - name: Build index + shards
+        run: python scripts/build_index.py --output _site/index.json --shards _site/plugins
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Stage pages
-        run: |
-          mkdir -p _site
-          cp index.json _site/index.json
-          cp schema.json _site/schema.json
+      - name: Build catalog page
+        run: python scripts/build_site.py --index _site/index.json --output _site/index.html
+      - name: Stage schema
+        run: cp schema.json _site/schema.json
       - name: Commit generated index
         run: |
+          cp _site/index.json index.json
           if git diff --quiet -- index.json; then
             echo "index.json 无变化"
             exit 0

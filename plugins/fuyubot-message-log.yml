@@ -1,0 +1,26 @@
+id: fuyubot.message-log
+name: Message Log
+summary: 消息日志：把新消息拼成一行交给宿主日志（控制台 / 日志页 / logs/fuyubot.log）。
+description: |
+  订阅 `updateNewMessage`，把文本 / 媒体 / 回复 / 转发 / 话题拼成一行
+  （聊天气泡、发送者、引用、转发来源、话题等），经 `host.log` 输出到控制台、
+  TUI 日志页与 `logs/fuyubot.log`。
+  不注册命令、不发消息、不改消息，也不依赖其它插件；停用 / 卸载不影响任何业务插件。
+repo: xiaoqvan/fuyubot-plugins
+license: MIT OR Apache-2.0
+homepage: https://github.com/xiaoqvan/fuyubot-plugins/tree/main/crates/fuyubot-plugin-message-log
+tags: [log, message, telegram]
+api: ">=0.1.4, <1.0"
+abi: 6
+depends: []
+versions:
+  - version: 0.1.1
+    tag: fuyubot.message-log-v0.1.1
+    assets:
+      windows-x86_64: fuyubot.message-log-0.1.1-windows-x86_64.zip
+      windows-aarch64: fuyubot.message-log-0.1.1-windows-aarch64.zip
+      linux-x86_64: fuyubot.message-log-0.1.1-linux-x86_64.zip
+      macos-aarch64: fuyubot.message-log-0.1.1-macos-aarch64.zip
+      linux-aarch64: fuyubot.message-log-0.1.1-linux-aarch64.zip
+      android-aarch64: fuyubot.message-log-0.1.1-android-aarch64.zip
+      android-x86_64: fuyubot.message-log-0.1.1-android-x86_64.zip

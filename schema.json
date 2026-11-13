@@ -1,18 +1,54 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://catmoecircle.github.io/FuyuBot-plugins/schema.json",
-  "title": "FuyuBot 插件商城索引",
+  "title": "FuyuBot 插件商城索引（schema 2：轻索引 + 明细分片）",
   "type": "object",
   "required": ["schema", "plugins"],
   "properties": {
-    "schema": { "const": 1 },
+    "schema": { "const": 2 },
     "plugins": {
       "type": "array",
-      "items": { "$ref": "#/$defs/plugin" }
+      "items": { "$ref": "#/$defs/summary" }
     }
   },
   "additionalProperties": false,
   "$defs": {
+    "summary": {
+      "type": "object",
+      "required": ["id", "name", "latest", "detail"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$" },
+        "name": { "type": "string" },
+        "summary": { "type": "string" },
+        "repo": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "latest": { "type": "string" },
+        "detail": {
+          "type": "string",
+          "pattern": "^plugins/[A-Za-z0-9][A-Za-z0-9._-]{0,127}\\.json$"
+        },
+        "abis": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 1 },
+          "description": "摘要：非 yanked 版本出现过的 ABI（给目录页筛选，客户端可忽略）"
+        },
+        "platform_min_abi": {
+          "type": "object",
+          "description": "摘要：平台 → 该平台可用版本里最低的 ABI；0 表示该版本没声明 ABI。商店用它判断本机能不能装。",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "shard": {
+      "type": "object",
+      "required": ["schema", "plugin"],
+      "properties": {
+        "schema": { "const": 2 },
+        "plugin": { "$ref": "#/$defs/plugin" }
+      },
+      "additionalProperties": false
+    },
     "plugin": {
       "type": "object",
       "required": ["id", "name", "repo", "latest", "versions"],

@@ -9,7 +9,7 @@ description: |
   模板表会自动加调用方前缀。
 repo: xiaoqvan/fuyubot-plugins
 license: MIT OR Apache-2.0
-homepage: https://github.com/xiaoqvan/fuyubot-plugins
+homepage: https://github.com/xiaoqvan/fuyubot-plugins/tree/main/crates/fuyubot-plugin-sqlite
 tags: [sqlite, storage, database]
 api: ">=0.1, <1.0"
 abi: 6
@@ -37,3 +37,14 @@ versions:
       linux-aarch64: fuyubot.sqlite-0.1.1-linux-aarch64.zip
       android-aarch64: fuyubot.sqlite-0.1.1-android-aarch64.zip
       android-x86_64: fuyubot.sqlite-0.1.1-android-x86_64.zip
+
+  - version: 0.1.2
+    tag: fuyubot.sqlite-v0.1.2
+    assets:
+      windows-x86_64: fuyubot.sqlite-0.1.2-windows-x86_64.zip
+      windows-aarch64: fuyubot.sqlite-0.1.2-windows-aarch64.zip
+      linux-x86_64: fuyubot.sqlite-0.1.2-linux-x86_64.zip
+      macos-aarch64: fuyubot.sqlite-0.1.2-macos-aarch64.zip
+      linux-aarch64: fuyubot.sqlite-0.1.2-linux-aarch64.zip
+      android-aarch64: fuyubot.sqlite-0.1.2-android-aarch64.zip
+      android-x86_64: fuyubot.sqlite-0.1.2-android-x86_64.zip

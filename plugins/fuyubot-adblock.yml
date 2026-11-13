@@ -7,11 +7,12 @@ description: |
   带全局触发词、入群 24h 内改过资料的人）再送 AI 深度审核，判定为广告后自动把关键词 /
   全文 / 名称 / 简介 / 转发来源 / 贴纸集写回黑名单。
   数据全部存在 MongoDB（依赖 `storage.mongo`），插件启动时自动建集合与索引。
+  主人 / 管理员不再由插件自己配：用宿主 `fuyubot.toml` 的 `[roles].owners` / `[roles].admins`。
 repo: xiaoqvan/fuyubot-plugins
 license: MIT OR Apache-2.0
-homepage: https://github.com/xiaoqvan/fuyubot-plugins
+homepage: https://github.com/xiaoqvan/fuyubot-plugins/tree/main/crates/fuyubot-plugin-adblock
 tags: [moderation, antispam, telegram, ai]
-api: ">=0.1, <1.0"
+api: ">=0.1.5, <1.0"
 abi: 6
 depends: [storage.mongo]
 versions:
@@ -37,3 +38,15 @@ versions:
       linux-aarch64: fuyubot.adblock-0.1.1-linux-aarch64.zip
       android-aarch64: fuyubot.adblock-0.1.1-android-aarch64.zip
       android-x86_64: fuyubot.adblock-0.1.1-android-x86_64.zip
+
+  # 0.1.2：命令表迁到宿主 fuyubot.host.commands；主人 / 管理员改用 [roles]
+  - version: 0.1.2
+    tag: fuyubot.adblock-v0.1.2
+    assets:
+      windows-x86_64: fuyubot.adblock-0.1.2-windows-x86_64.zip
+      windows-aarch64: fuyubot.adblock-0.1.2-windows-aarch64.zip
+      linux-x86_64: fuyubot.adblock-0.1.2-linux-x86_64.zip
+      macos-aarch64: fuyubot.adblock-0.1.2-macos-aarch64.zip
+      linux-aarch64: fuyubot.adblock-0.1.2-linux-aarch64.zip
+      android-aarch64: fuyubot.adblock-0.1.2-android-aarch64.zip
+      android-x86_64: fuyubot.adblock-0.1.2-android-x86_64.zip
