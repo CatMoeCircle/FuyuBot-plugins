@@ -11,6 +11,17 @@ tags: [whois, domain, card]
 abi: 6
 depends: []
 versions:
+  # 0.1.0：ABI 5（旧宿主）
+  - version: 0.1.0
+    tag: whois-v0.1.0
+    assets:
+      windows-x86_64: whois-0.1.0-windows-x86_64.zip
+      linux-x86_64: whois-0.1.0-linux-x86_64.zip
+      macos-aarch64: whois-0.1.0-macos-aarch64.zip
+      android-aarch64: whois-0.1.0-android-aarch64.zip
+      android-x86_64: whois-0.1.0-android-x86_64.zip
+
+  # 0.1.1：ABI 6
   - version: 0.1.1
     tag: whois-v0.1.1
     assets:
@@ -19,3 +30,13 @@ versions:
       macos-aarch64: whois-0.1.1-macos-aarch64.zip
       android-aarch64: whois-0.1.1-android-aarch64.zip
       android-x86_64: whois-0.1.1-android-x86_64.zip
+
+  # 0.1.3：当前最新，ABI 6
+  - version: 0.1.3
+    tag: whois-v0.1.3
+    assets:
+      windows-x86_64: whois-0.1.3-windows-x86_64.zip
+      linux-x86_64: whois-0.1.3-linux-x86_64.zip
+      macos-aarch64: whois-0.1.3-macos-aarch64.zip
+      android-aarch64: whois-0.1.3-android-aarch64.zip
+      android-x86_64: whois-0.1.3-android-x86_64.zip
