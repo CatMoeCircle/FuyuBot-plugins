@@ -55,7 +55,7 @@
       "id": "fuyubot.douyin",
       "name": "Douyin Parser",
       "summary": "抖音解析：/dy 命令与聊天里的分享链接，发去水印视频 / 图集，可选 SQLite 缓存文件 id。",
-      "latest": "0.1.2",
+      "latest": "0.1.3",
       "detail": "plugins/fuyubot.douyin.json",
       "repo": "xiaoqvan/fuyubot-plugins",
       "tags": [
@@ -186,7 +186,7 @@
       "id": "fuyubot.music",
       "name": "Music Parser",
       "summary": "网易云 / 汽水音乐：/music163、/soda 搜索与解析，按音质发音频（汽水 UGC 发视频）。",
-      "latest": "0.1.2",
+      "latest": "0.1.3",
       "detail": "plugins/fuyubot.music.json",
       "repo": "xiaoqvan/fuyubot-plugins",
       "tags": [
