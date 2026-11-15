@@ -240,7 +240,7 @@
       "id": "kfc",
       "name": "KFC",
       "summary": "抓一句肯德基疯话，渲染成推特卡片发回去。",
-      "latest": "0.1.3",
+      "latest": "0.1.4",
       "detail": "plugins/kfc.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
@@ -288,7 +288,7 @@
       "id": "ppxfy",
       "name": "PPXFY",
       "summary": "从 DMM / DLSite 下载并解压作品，附带记录与 Telegraph 上传。",
-      "latest": "0.1.3",
+      "latest": "0.1.4",
       "detail": "plugins/ppxfy.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
