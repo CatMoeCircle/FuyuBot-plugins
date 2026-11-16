@@ -1,6 +1,6 @@
 id: fuyubot.adblock
 name: Adblock
-summary: 广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核，命中即删除、禁言或封禁。
+summary: 广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核 / 自动点赞机器人，命中即删除、禁言或封禁。
 description: |
   一条消息进来，按关键词、文件、贴纸、转发来源、用户名、资料逐项匹配；命中就撤回消息、
   禁言或封禁，并把处置记录写进群绑定的日志频道。没命中的可疑消息（引用、联系人、
@@ -50,3 +50,15 @@ versions:
       linux-aarch64: fuyubot.adblock-0.1.2-linux-aarch64.zip
       android-aarch64: fuyubot.adblock-0.1.2-android-aarch64.zip
       android-x86_64: fuyubot.adblock-0.1.2-android-x86_64.zip
+
+  # 0.1.3：自动点赞机器人、宿主 TDLib 对象缓存、话题内处置提示
+  - version: 0.1.3
+    tag: fuyubot.adblock-v0.1.3
+    assets:
+      windows-x86_64: fuyubot.adblock-0.1.3-windows-x86_64.zip
+      windows-aarch64: fuyubot.adblock-0.1.3-windows-aarch64.zip
+      linux-x86_64: fuyubot.adblock-0.1.3-linux-x86_64.zip
+      macos-aarch64: fuyubot.adblock-0.1.3-macos-aarch64.zip
+      linux-aarch64: fuyubot.adblock-0.1.3-linux-aarch64.zip
+      android-aarch64: fuyubot.adblock-0.1.3-android-aarch64.zip
+      android-x86_64: fuyubot.adblock-0.1.3-android-x86_64.zip

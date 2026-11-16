@@ -7,6 +7,8 @@ description: |
   命令按登记它的插件分组——归属由宿主的调用者栈判定（ABI v6），插件自报的名字不算数；
   没有归属的命令收在「其它」里。`/help t` / `/help text` 回同一份分组数据的文字版。
   回复走宿主的命令回复服务（`fuyubot.host.command`）：发新消息、编辑原命令、ephemeral 由宿主决定。
+  图片版在私聊里放宽一档：主人看到全部命令，管理员看到除主人命令以外的全部；
+  每条命令带角色描边与会话图标。文字版 `/help text` 保持原有过滤语义。
   硬依赖 `fuyubot.html2img`（没装时停在 Pending）。
   ⚠️ 与内置 help 同 id，不能同时加载：装之前先把内置的 `fuyubot_plugin_help.dll` 改名成 `.disable`。
 repo: xiaoqvan/fuyubot-plugins
@@ -39,3 +41,15 @@ versions:
       linux-aarch64: fuyubot.help-0.1.3-linux-aarch64.zip
       android-aarch64: fuyubot.help-0.1.3-android-aarch64.zip
       android-x86_64: fuyubot.help-0.1.3-android-x86_64.zip
+
+  # 0.1.4：图片版私聊放宽一档、角色描边配色、本地预览示例
+  - version: 0.1.4
+    tag: fuyubot.help-v0.1.4
+    assets:
+      windows-x86_64: fuyubot.help-0.1.4-windows-x86_64.zip
+      windows-aarch64: fuyubot.help-0.1.4-windows-aarch64.zip
+      linux-x86_64: fuyubot.help-0.1.4-linux-x86_64.zip
+      macos-aarch64: fuyubot.help-0.1.4-macos-aarch64.zip
+      linux-aarch64: fuyubot.help-0.1.4-linux-aarch64.zip
+      android-aarch64: fuyubot.help-0.1.4-android-aarch64.zip
+      android-x86_64: fuyubot.help-0.1.4-android-x86_64.zip

@@ -8,7 +8,7 @@ description: |
   可选 `fuyubot.sqlite` 缓存「音乐 id + 音质 → TDLib 文件 id」，重复点歌不再下载。
   频道里编辑原帖（先查 `getMessageProperties` 编辑权限，没有就跳过）；群里
   「频道身份 + 转发」的消息不解析。
-  全异步：插件自带 tokio 多线程 runtime，HTTP 走 reqwest（rustls），下载流式落盘。
+  全异步：插件自带 tokio 多线程 runtime，HTTP 走 reqwest（rustls，显式 aws-lc-rs 后端），下载流式落盘。
 repo: xiaoqvan/fuyubot-plugins
 license: MIT OR Apache-2.0
 homepage: https://github.com/xiaoqvan/fuyubot-plugins/tree/main/crates/fuyubot-plugin-music
@@ -37,3 +37,15 @@ versions:
       linux-aarch64: fuyubot.music-0.1.3-linux-aarch64.zip
       android-aarch64: fuyubot.music-0.1.3-android-aarch64.zip
       android-x86_64: fuyubot.music-0.1.3-android-x86_64.zip
+
+  # 0.1.4：rustls 显式指定 aws-lc-rs 后端（workspace 同构建不再 panic）
+  - version: 0.1.4
+    tag: fuyubot.music-v0.1.4
+    assets:
+      windows-x86_64: fuyubot.music-0.1.4-windows-x86_64.zip
+      windows-aarch64: fuyubot.music-0.1.4-windows-aarch64.zip
+      linux-x86_64: fuyubot.music-0.1.4-linux-x86_64.zip
+      macos-aarch64: fuyubot.music-0.1.4-macos-aarch64.zip
+      linux-aarch64: fuyubot.music-0.1.4-linux-aarch64.zip
+      android-aarch64: fuyubot.music-0.1.4-android-aarch64.zip
+      android-x86_64: fuyubot.music-0.1.4-android-x86_64.zip
