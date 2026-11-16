@@ -1,0 +1,24 @@
+id: trending
+name: GitHub Trending
+summary: 抓取 GitHub Trending 今日 / 本周 / 本月榜单，渲染成 4 列卡片墙并以照片回复。
+description: |
+  发 /trending（可带 today / weekly / monthly，也认「今日 / 本周 / 本月」）即抓取
+  github.com/trending 对应周期的榜单，把上榜仓库渲染成 4 列卡片墙图片回复：每张卡
+  有作者头像、仓库名与 owner、两行简介、累计 star、本周期新增 star、fork 与主语言；
+  页眉是周期徽标，页脚标注数据来源。卡片图由宿主上的 fuyubot.html2img 渲染
+  （硬依赖）。支持 Windows、Linux、macOS 与 Android AArch64 / x86_64。
+repo: fengyegf/fy-plugins
+homepage: https://github.com/fengyegf/fy-plugins
+tags: [github, trending, card, image]
+abi: 6
+depends: [fuyubot.html2img]
+versions:
+  # 0.1.0：首版，ABI 6（宿主 0.1.6 + fuyubot.html2img 0.1.2 实测三档榜单出图）
+  - version: 0.1.0
+    tag: trending-v0.1.0
+    assets:
+      windows-x86_64: trending-0.1.0-windows-x86_64.zip
+      linux-x86_64: trending-0.1.0-linux-x86_64.zip
+      macos-aarch64: trending-0.1.0-macos-aarch64.zip
+      android-aarch64: trending-0.1.0-android-aarch64.zip
+      android-x86_64: trending-0.1.0-android-x86_64.zip
