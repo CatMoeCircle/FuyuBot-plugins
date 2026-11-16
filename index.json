@@ -5,7 +5,7 @@
       "id": "epic",
       "name": "Epic",
       "summary": "生成 Epic 免费游戏卡片并以照片回复消息。",
-      "latest": "0.1.3",
+      "latest": "0.1.4",
       "detail": "plugins/epic.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
@@ -240,7 +240,7 @@
       "id": "kfc",
       "name": "KFC",
       "summary": "抓一句肯德基疯话，渲染成推特卡片发回去。",
-      "latest": "0.1.4",
+      "latest": "0.1.5",
       "detail": "plugins/kfc.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
@@ -264,7 +264,7 @@
       "id": "musiccard",
       "name": "MusicCard",
       "summary": "生成网易云音乐卡片，并以照片回复命令消息。",
-      "latest": "0.1.3",
+      "latest": "0.1.4",
       "detail": "plugins/musiccard.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
@@ -288,7 +288,7 @@
       "id": "ppxfy",
       "name": "PPXFY",
       "summary": "从 DMM / DLSite 下载并解压作品，附带记录与 Telegraph 上传。",
-      "latest": "0.1.4",
+      "latest": "0.1.5",
       "detail": "plugins/ppxfy.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
@@ -310,7 +310,7 @@
       "id": "system",
       "name": "System",
       "summary": "查看宿主机系统信息与机器人状态，渲染成信息卡片并以照片回复。",
-      "latest": "0.1.3",
+      "latest": "0.1.4",
       "detail": "plugins/system.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
@@ -334,7 +334,7 @@
       "id": "whois",
       "name": "Whois",
       "summary": "查询域名 Whois 信息，渲染成信息卡片并以照片回复。",
-      "latest": "0.1.3",
+      "latest": "0.1.4",
       "detail": "plugins/whois.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
