@@ -331,6 +331,30 @@
       }
     },
     {
+      "id": "trending",
+      "name": "GitHub Trending",
+      "summary": "抓取 GitHub Trending 今日 / 本周 / 本月榜单，渲染成 4 列卡片墙并以照片回复。",
+      "latest": "0.1.0",
+      "detail": "plugins/trending.json",
+      "repo": "fengyegf/fy-plugins",
+      "tags": [
+        "github",
+        "trending",
+        "card",
+        "image"
+      ],
+      "abis": [
+        6
+      ],
+      "platform_min_abi": {
+        "windows-x86_64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
+      }
+    },
+    {
       "id": "whois",
       "name": "Whois",
       "summary": "查询域名 Whois 信息，渲染成信息卡片并以照片回复。",
