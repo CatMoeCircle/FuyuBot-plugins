@@ -28,8 +28,8 @@
     {
       "id": "fuyubot.adblock",
       "name": "Adblock",
-      "summary": "广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核 / 自动点赞机器人，命中即删除、禁言或封禁；可删入群提示、取消频道置顶。",
-      "latest": "0.1.4",
+      "summary": "广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核，命中即删除、禁言或封禁；自动点赞机器人默认只封禁回应权限（可跟随广告）；可删入群提示、取消频道置顶。",
+      "latest": "0.1.5",
       "detail": "plugins/fuyubot.adblock.json",
       "repo": "xiaoqvan/fuyubot-plugins",
       "tags": [
