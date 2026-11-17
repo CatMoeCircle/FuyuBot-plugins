@@ -28,8 +28,8 @@
     {
       "id": "fuyubot.adblock",
       "name": "Adblock",
-      "summary": "广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核 / 自动点赞机器人，命中即删除、禁言或封禁。",
-      "latest": "0.1.3",
+      "summary": "广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核 / 自动点赞机器人，命中即删除、禁言或封禁；可删入群提示、取消频道置顶。",
+      "latest": "0.1.4",
       "detail": "plugins/fuyubot.adblock.json",
       "repo": "xiaoqvan/fuyubot-plugins",
       "tags": [
@@ -186,14 +186,15 @@
     {
       "id": "fuyubot.music",
       "name": "Music Parser",
-      "summary": "网易云 / 汽水音乐：/music163、/soda 搜索与解析，按音质发音频（汽水 UGC 发视频）。",
-      "latest": "0.1.4",
+      "summary": "网易云 / 汽水 / YouTube Music：/music163、/soda、/ytmusic 搜索与解析，按音质发音频（汽水 UGC 发视频）。",
+      "latest": "0.2.0",
       "detail": "plugins/fuyubot.music.json",
       "repo": "xiaoqvan/fuyubot-plugins",
       "tags": [
         "music",
         "netease",
         "qishui",
+        "youtube",
         "audio",
         "telegram"
       ],
