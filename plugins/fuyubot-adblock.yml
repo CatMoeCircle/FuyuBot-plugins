@@ -1,13 +1,14 @@
 id: fuyubot.adblock
 name: Adblock
-summary: 广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核 / 自动点赞机器人，命中即删除、禁言或封禁；可删入群提示、取消频道置顶。
+summary: 广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核，命中即删除、禁言或封禁；自动点赞机器人默认只封禁回应权限（可跟随广告）；可删入群提示、取消频道置顶。
 description: |
   一条消息进来，按关键词、文件、贴纸、转发来源、用户名、资料逐项匹配；命中就撤回消息、
   禁言或封禁，并把处置记录写进群绑定的日志频道。没命中的可疑消息（引用、联系人、
   带全局触发词、入群 24h 内改过资料的人）再送 AI 深度审核，判定为广告后自动把关键词 /
   全文 / 名称 / 简介 / 转发来源 / 贴纸集写回黑名单。
   另外按群开关可删除三种入群提示（成员加入 / 社区加入 / 邀请链接），并自动取消群绑定频道帖子被
-  Telegram 自动置顶的置顶；点赞机器人命中后会清掉它已点出去的回应。
+  Telegram 自动置顶的置顶；点赞机器人默认只封禁回应权限（仍可正常发言），群内可切换为跟随广告
+  的禁言 / 封禁，并清掉它已点出去的回应。
   数据全部存在 MongoDB（依赖 `storage.mongo`），插件启动时自动建集合与索引。
   主人 / 管理员不再由插件自己配：用宿主 `fuyubot.toml` 的 `[roles].owners` / `[roles].admins`。
 repo: xiaoqvan/fuyubot-plugins
@@ -75,3 +76,14 @@ versions:
       linux-aarch64: fuyubot.adblock-0.1.4-linux-aarch64.zip
       android-aarch64: fuyubot.adblock-0.1.4-android-aarch64.zip
       android-x86_64: fuyubot.adblock-0.1.4-android-x86_64.zip
+  # 0.1.5：自动点赞默认只封禁回应权限，可改为跟随广告禁言 / 封禁
+  - version: 0.1.5
+    tag: fuyubot.adblock-v0.1.5
+    assets:
+      windows-x86_64: fuyubot.adblock-0.1.5-windows-x86_64.zip
+      windows-aarch64: fuyubot.adblock-0.1.5-windows-aarch64.zip
+      linux-x86_64: fuyubot.adblock-0.1.5-linux-x86_64.zip
+      macos-aarch64: fuyubot.adblock-0.1.5-macos-aarch64.zip
+      linux-aarch64: fuyubot.adblock-0.1.5-linux-aarch64.zip
+      android-aarch64: fuyubot.adblock-0.1.5-android-aarch64.zip
+      android-x86_64: fuyubot.adblock-0.1.5-android-x86_64.zip
