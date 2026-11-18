@@ -2,13 +2,14 @@ id: epic
 name: Epic
 summary: 生成 Epic 免费游戏卡片并以照片回复消息。
 description: |
-  抓取 Epic 游戏商城当前的免费游戏列表，把本期免费作品渲染成信息卡片，
-  以照片回复触发消息。支持 Windows、Linux、macOS 与 Android AArch64/x86_64。
+  抓取 Epic 游戏商城当前的免费游戏列表，把本期免费作品整理成信息卡片，
+  交给宿主上的 fuyubot.html2img 渲染后再以照片回复触发消息。支持 Windows、
+  Linux、macOS 与 Android AArch64/x86_64。
 repo: fengyegf/fy-plugins
-homepage: https://github.com/fengyegf/fy-plugins
+homepage: https://github.com/fengyegf/fy-plugins/tree/main/crates/fuyubot-plugin-epic
 tags: [epic, game, card]
 abi: 6
-depends: []
+depends: [fuyubot.html2img]
 versions:
   # 0.1.0：ABI 5（旧宿主）
   - version: 0.1.0
@@ -40,7 +41,7 @@ versions:
       android-aarch64: epic-0.1.3-android-aarch64.zip
       android-x86_64: epic-0.1.3-android-x86_64.zip
 
-  # 0.1.4：当前最新，ABI 6（命令回复与 /help 登记改走宿主）
+  # 0.1.4：ABI 6（命令回复与 /help 登记改走宿主）
   - version: 0.1.4
     tag: epic-v0.1.4
     assets:
@@ -49,3 +50,13 @@ versions:
       macos-aarch64: epic-0.1.4-macos-aarch64.zip
       android-aarch64: epic-0.1.4-android-aarch64.zip
       android-x86_64: epic-0.1.4-android-x86_64.zip
+
+  # 0.1.5：当前最新，ABI 6（plugin.json + bin/ 布局，随包 config.default.toml，Release 带构建证明）
+  - version: 0.1.5
+    tag: epic-v0.1.5
+    assets:
+      windows-x86_64: epic-0.1.5-windows-x86_64.zip
+      linux-x86_64: epic-0.1.5-linux-x86_64.zip
+      macos-aarch64: epic-0.1.5-macos-aarch64.zip
+      android-aarch64: epic-0.1.5-android-aarch64.zip
+      android-x86_64: epic-0.1.5-android-x86_64.zip

@@ -8,7 +8,7 @@ description: |
   页眉是周期徽标，页脚标注数据来源。卡片图由宿主上的 fuyubot.html2img 渲染
   （硬依赖）。支持 Windows、Linux、macOS 与 Android AArch64 / x86_64。
 repo: fengyegf/fy-plugins
-homepage: https://github.com/fengyegf/fy-plugins
+homepage: https://github.com/fengyegf/fy-plugins/tree/main/crates/fuyubot-plugin-trending
 tags: [github, trending, card, image]
 abi: 6
 depends: [fuyubot.html2img]
@@ -22,3 +22,13 @@ versions:
       macos-aarch64: trending-0.1.0-macos-aarch64.zip
       android-aarch64: trending-0.1.0-android-aarch64.zip
       android-x86_64: trending-0.1.0-android-x86_64.zip
+
+  # 0.1.1：当前最新，ABI 6（plugin.json + bin/ 布局，随包 config.default.toml，Release 带构建证明）
+  - version: 0.1.1
+    tag: trending-v0.1.1
+    assets:
+      windows-x86_64: trending-0.1.1-windows-x86_64.zip
+      linux-x86_64: trending-0.1.1-linux-x86_64.zip
+      macos-aarch64: trending-0.1.1-macos-aarch64.zip
+      android-aarch64: trending-0.1.1-android-aarch64.zip
+      android-x86_64: trending-0.1.1-android-x86_64.zip
