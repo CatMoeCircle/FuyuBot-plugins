@@ -2,10 +2,34 @@
   "schema": 2,
   "plugins": [
     {
+      "id": "bidibot",
+      "name": "Bidibot 双向私聊",
+      "summary": "把陌生人私聊收进论坛群话题，主人在话题里回复即转发回用户（双向中转）。",
+      "latest": "0.1.1",
+      "detail": "plugins/bidibot.json",
+      "repo": "fengyegf/fy-plugins",
+      "tags": [
+        "private",
+        "relay",
+        "forum",
+        "card"
+      ],
+      "abis": [
+        6
+      ],
+      "platform_min_abi": {
+        "windows-x86_64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
+      }
+    },
+    {
       "id": "epic",
       "name": "Epic",
       "summary": "生成 Epic 免费游戏卡片并以照片回复消息。",
-      "latest": "0.1.4",
+      "latest": "0.1.5",
       "detail": "plugins/epic.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
@@ -214,7 +238,7 @@
       "id": "kfc",
       "name": "KFC",
       "summary": "抓一句肯德基疯话，渲染成推特卡片发回去。",
-      "latest": "0.1.5",
+      "latest": "0.1.6",
       "detail": "plugins/kfc.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
@@ -238,7 +262,7 @@
       "id": "musiccard",
       "name": "MusicCard",
       "summary": "生成网易云音乐卡片，并以照片回复命令消息。",
-      "latest": "0.1.4",
+      "latest": "0.1.5",
       "detail": "plugins/musiccard.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
@@ -262,7 +286,7 @@
       "id": "ppxfy",
       "name": "PPXFY",
       "summary": "从 DMM / DLSite 下载并解压作品，附带记录与 Telegraph 上传。",
-      "latest": "0.1.5",
+      "latest": "0.1.6",
       "detail": "plugins/ppxfy.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
@@ -281,10 +305,34 @@
       }
     },
     {
+      "id": "rusto",
+      "name": "RustO OCR",
+      "summary": "纯 Rust OCR：发图 /ocr 识别文字，并以 rusto.ocr 服务供其它插件调用。",
+      "latest": "0.1.1",
+      "detail": "plugins/rusto.json",
+      "repo": "fengyegf/fy-plugins",
+      "tags": [
+        "ocr",
+        "image",
+        "text",
+        "service"
+      ],
+      "abis": [
+        6
+      ],
+      "platform_min_abi": {
+        "windows-x86_64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
+      }
+    },
+    {
       "id": "system",
       "name": "System",
       "summary": "查看宿主机系统信息与机器人状态，渲染成信息卡片并以照片回复。",
-      "latest": "0.1.4",
+      "latest": "0.1.5",
       "detail": "plugins/system.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
@@ -308,7 +356,7 @@
       "id": "trending",
       "name": "GitHub Trending",
       "summary": "抓取 GitHub Trending 今日 / 本周 / 本月榜单，渲染成 4 列卡片墙并以照片回复。",
-      "latest": "0.1.0",
+      "latest": "0.1.1",
       "detail": "plugins/trending.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
@@ -332,7 +380,7 @@
       "id": "whois",
       "name": "Whois",
       "summary": "查询域名 Whois 信息，渲染成信息卡片并以照片回复。",
-      "latest": "0.1.4",
+      "latest": "0.1.5",
       "detail": "plugins/whois.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
