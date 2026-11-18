@@ -6,10 +6,10 @@ description: |
   Telegraph 预览页并把 Galgame 记录写入 storage.mongo（软依赖）。支持 Windows、
   Linux 与 macOS。
 repo: fengyegf/fy-plugins
-homepage: https://github.com/fengyegf/fy-plugins
+homepage: https://github.com/fengyegf/fy-plugins/tree/main/crates/fuyubot-plugin-ppxfy
 tags: [dmm, dlsite, download]
 abi: 6
-depends: []
+depends: [storage.mongo]
 versions:
   # 0.1.0：ABI 5（旧宿主）
   - version: 0.1.0
@@ -43,10 +43,18 @@ versions:
       linux-x86_64: ppxfy-0.1.4-linux-x86_64.zip
       macos-aarch64: ppxfy-0.1.4-macos-aarch64.zip
 
-  # 0.1.5：当前最新，ABI 6（命令回复与 /help 登记改走宿主）
+  # 0.1.5：ABI 6（命令回复与 /help 登记改走宿主）
   - version: 0.1.5
     tag: ppxfy-v0.1.5
     assets:
       windows-x86_64: ppxfy-0.1.5-windows-x86_64.zip
       linux-x86_64: ppxfy-0.1.5-linux-x86_64.zip
       macos-aarch64: ppxfy-0.1.5-macos-aarch64.zip
+
+  # 0.1.6：当前最新，ABI 6（plugin.json + bin/ 布局，随包 config.default.toml，Release 带构建证明）
+  - version: 0.1.6
+    tag: ppxfy-v0.1.6
+    assets:
+      windows-x86_64: ppxfy-0.1.6-windows-x86_64.zip
+      linux-x86_64: ppxfy-0.1.6-linux-x86_64.zip
+      macos-aarch64: ppxfy-0.1.6-macos-aarch64.zip
