@@ -378,6 +378,32 @@
         "android-aarch64": 5,
         "android-x86_64": 5
       }
+    },
+    {
+      "id": "xiaoqvan.x",
+      "name": "X 解析",
+      "summary": "X / Twitter 解析：图片视频按 Telegram 相册发送，纯文本出 X 风格卡片。",
+      "latest": "0.1.0",
+      "detail": "plugins/xiaoqvan.x.json",
+      "repo": "xiaoqvan/fuyubot-plugins",
+      "tags": [
+        "twitter",
+        "x",
+        "parser",
+        "card"
+      ],
+      "abis": [
+        6
+      ],
+      "platform_min_abi": {
+        "windows-x86_64": 6,
+        "windows-aarch64": 6,
+        "linux-x86_64": 6,
+        "linux-aarch64": 6,
+        "macos-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
+      }
     }
   ]
 }
