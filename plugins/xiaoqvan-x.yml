@@ -1,0 +1,27 @@
+id: xiaoqvan.x
+name: X 解析
+summary: X / Twitter 解析：图片视频按 Telegram 相册发送，纯文本出 X 风格卡片。
+description: |
+  X / Twitter 文章解析：/x 命令与聊天里的链接都会解析。
+  图片、视频按 Telegram 相册每 10 个一组发送；纯文本文章交给 fuyubot.html2img
+  出 X 风格卡片（详情页版式、原文与谷歌翻译对照、底部 bot 与插件署名），没装
+  html2img 就发纯文本。
+  有媒体时卡片最多预览两张，视频只画封面，GIF 带角标；非中文帖子会尝试谷歌机翻。
+  解析走 FxTwitter / FxEmbed 公开只读接口，不需要 token。
+repo: xiaoqvan/fuyubot-plugins
+license: MIT OR Apache-2.0
+homepage: https://github.com/xiaoqvan/fuyubot-plugins/tree/main/crates/fuyubot-plugin-x
+tags: [twitter, x, parser, card]
+api: ">=0.1.4, <1.0"
+abi: 6
+versions:
+  - version: 0.1.0
+    tag: xiaoqvan.x-v0.1.0
+    assets:
+      windows-x86_64: xiaoqvan.x-0.1.0-windows-x86_64.zip
+      windows-aarch64: xiaoqvan.x-0.1.0-windows-aarch64.zip
+      linux-x86_64: xiaoqvan.x-0.1.0-linux-x86_64.zip
+      linux-aarch64: xiaoqvan.x-0.1.0-linux-aarch64.zip
+      macos-aarch64: xiaoqvan.x-0.1.0-macos-aarch64.zip
+      android-aarch64: xiaoqvan.x-0.1.0-android-aarch64.zip
+      android-x86_64: xiaoqvan.x-0.1.0-android-x86_64.zip
