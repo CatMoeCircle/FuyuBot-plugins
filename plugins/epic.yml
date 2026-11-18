@@ -51,12 +51,13 @@ versions:
       android-aarch64: epic-0.1.4-android-aarch64.zip
       android-x86_64: epic-0.1.4-android-x86_64.zip
 
-  # 0.1.5：当前最新，ABI 6（plugin.json + bin/ 布局，随包 config.default.toml，Release 带构建证明）
+  # 0.1.5：当前最新，ABI 6（plugin.json + bin/ 布局，随包 config.default.toml；构建带证明）
+  # 注：CI 的 macOS runner 排队未出包，0.1.5 暂无 macos-aarch64 资产，
+  #     macOS 宿主会回退到 0.1.4；下一版补齐。
   - version: 0.1.5
     tag: epic-v0.1.5
     assets:
       windows-x86_64: epic-0.1.5-windows-x86_64.zip
       linux-x86_64: epic-0.1.5-linux-x86_64.zip
-      macos-aarch64: epic-0.1.5-macos-aarch64.zip
       android-aarch64: epic-0.1.5-android-aarch64.zip
       android-x86_64: epic-0.1.5-android-x86_64.zip
