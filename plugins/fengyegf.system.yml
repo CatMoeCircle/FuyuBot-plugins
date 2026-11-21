@@ -1,0 +1,22 @@
+id: fengyegf.system
+name: System
+summary: 查看宿主机系统信息与机器人状态，渲染成信息卡片并以照片回复。
+description: |
+  展示 CPU、内存、磁盘、运行时长、TDLib 与机器人状态，支持背景图与头像合成，
+  信息卡片由宿主上的 fuyubot.html2img 渲染成 JPEG，以照片回复触发消息。支持
+  Windows、Linux、macOS 与 Android AArch64/x86_64。
+repo: fengyegf/fy-plugins
+homepage: https://github.com/fengyegf/fy-plugins/tree/main/crates/fuyubot-plugin-system
+tags: [system, status, card]
+abi: 6
+depends: [fuyubot.html2img]
+versions:
+  # 0.1.6：ABI 6，资产按 fengyegf.<id> 命名（Linux 包按 glibc 2.28 构建）
+  - version: 0.1.6
+    tag: fengyegf.system-v0.1.6
+    assets:
+      windows-x86_64: fengyegf.system-0.1.6-windows-x86_64.zip
+      linux-x86_64: fengyegf.system-0.1.6-linux-x86_64.zip
+      macos-aarch64: fengyegf.system-0.1.6-macos-aarch64.zip
+      android-aarch64: fengyegf.system-0.1.6-android-aarch64.zip
+      android-x86_64: fengyegf.system-0.1.6-android-x86_64.zip
