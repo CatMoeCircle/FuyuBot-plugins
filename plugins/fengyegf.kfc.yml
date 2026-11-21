@@ -1,0 +1,22 @@
+id: fengyegf.kfc
+name: KFC
+summary: 抓一句肯德基疯话，渲染成推特卡片发回去。
+description: |
+  随机抓取肯德基疯狂星期四文案，带内联头像与 Nes 风格样式，由宿主上的
+  fuyubot.html2img 渲染成推特卡片，以照片回复触发消息。支持 Windows、Linux、
+  macOS 与 Android AArch64/x86_64。
+repo: fengyegf/fy-plugins
+homepage: https://github.com/fengyegf/fy-plugins/tree/main/crates/fuyubot-plugin-kfc
+tags: [kfc, meme, card]
+abi: 6
+depends: [fuyubot.html2img]
+versions:
+  # 0.1.7：ABI 6，资产按 fengyegf.<id> 命名（Linux 包按 glibc 2.28 构建）
+  - version: 0.1.7
+    tag: fengyegf.kfc-v0.1.7
+    assets:
+      windows-x86_64: fengyegf.kfc-0.1.7-windows-x86_64.zip
+      linux-x86_64: fengyegf.kfc-0.1.7-linux-x86_64.zip
+      macos-aarch64: fengyegf.kfc-0.1.7-macos-aarch64.zip
+      android-aarch64: fengyegf.kfc-0.1.7-android-aarch64.zip
+      android-x86_64: fengyegf.kfc-0.1.7-android-x86_64.zip

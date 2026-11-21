@@ -1,0 +1,22 @@
+id: fengyegf.musiccard
+name: MusicCard
+summary: 生成网易云音乐卡片，并以照片回复命令消息。
+description: |
+  支持通过歌曲 ID、网易云歌曲链接或关键词查询歌曲，获取封面、歌词与译文，
+  由宿主上的 fuyubot.html2img 渲染包含歌曲信息、歌词、日期和二维码的卡片图，
+  以照片回复命令消息。支持 Windows、Linux、macOS 与 Android AArch64/x86_64。
+repo: fengyegf/fy-plugins
+homepage: https://github.com/fengyegf/fy-plugins/tree/main/crates/fuyubot-plugin-musiccard
+tags: [music, netease, card]
+abi: 6
+depends: [fuyubot.html2img]
+versions:
+  # 0.1.6：ABI 6，资产按 fengyegf.<id> 命名（Linux 包按 glibc 2.28 构建）
+  - version: 0.1.6
+    tag: fengyegf.musiccard-v0.1.6
+    assets:
+      windows-x86_64: fengyegf.musiccard-0.1.6-windows-x86_64.zip
+      linux-x86_64: fengyegf.musiccard-0.1.6-linux-x86_64.zip
+      macos-aarch64: fengyegf.musiccard-0.1.6-macos-aarch64.zip
+      android-aarch64: fengyegf.musiccard-0.1.6-android-aarch64.zip
+      android-x86_64: fengyegf.musiccard-0.1.6-android-x86_64.zip
