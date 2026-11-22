@@ -20,3 +20,13 @@ versions:
       macos-aarch64: fengyegf.system-0.1.6-macos-aarch64.zip
       android-aarch64: fengyegf.system-0.1.6-android-aarch64.zip
       android-x86_64: fengyegf.system-0.1.6-android-x86_64.zip
+
+  # 0.1.7：ABI 6，管理员改取宿主 [roles]，super_admin 只作显式覆盖
+  - version: 0.1.7
+    tag: fengyegf.system-v0.1.7
+    assets:
+      windows-x86_64: fengyegf.system-0.1.7-windows-x86_64.zip
+      linux-x86_64: fengyegf.system-0.1.7-linux-x86_64.zip
+      macos-aarch64: fengyegf.system-0.1.7-macos-aarch64.zip
+      android-aarch64: fengyegf.system-0.1.7-android-aarch64.zip
+      android-x86_64: fengyegf.system-0.1.7-android-x86_64.zip
