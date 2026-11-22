@@ -1,0 +1,24 @@
+id: fengyegf.bidibot
+name: Bidibot 双向私聊
+summary: 把陌生人私聊收进论坛群话题，主人在话题里回复即转发回用户（双向中转）。
+description: |
+  用户私聊消息真转发进论坛群（一个用户一个话题，话题名 = 用户昵称），主人在
+  话题里回复后以 bot 身份发回用户，不暴露主人身份；带广告判定与三次熔断、限流、
+  单向拉黑，状态落在本地库；名片交给宿主上的 fuyubot.html2img 渲染（软依赖，
+  缺失时降级）；主人 / 管理员取宿主 [roles]，插件不再重复配置。支持 Windows、
+  Linux、macOS 与 Android AArch64/x86_64。
+repo: fengyegf/fy-plugins
+homepage: https://github.com/fengyegf/fy-plugins/tree/main/crates/fuyubot-plugin-bidibot
+tags: [private, relay, forum, card]
+abi: 6
+depends: [fuyubot.html2img]
+versions:
+  # 0.1.2：ABI 6，资产按 fengyegf.<id> 命名；主人改取宿主 [roles]，owner_id 只作额外主人
+  - version: 0.1.2
+    tag: fengyegf.bidibot-v0.1.2
+    assets:
+      windows-x86_64: fengyegf.bidibot-0.1.2-windows-x86_64.zip
+      linux-x86_64: fengyegf.bidibot-0.1.2-linux-x86_64.zip
+      macos-aarch64: fengyegf.bidibot-0.1.2-macos-aarch64.zip
+      android-aarch64: fengyegf.bidibot-0.1.2-android-aarch64.zip
+      android-x86_64: fengyegf.bidibot-0.1.2-android-x86_64.zip
