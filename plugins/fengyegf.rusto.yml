@@ -5,7 +5,7 @@ description: |
   基于 RustO!（PP-OCRv6 Tiny INT8，纯 Rust MNN 运行时）的图片文字识别：回复图片
   发 /ocr 出文本，支持详细模式、引擎状态与模型预热；内置模型随包分发，不依赖
   Python / OpenCV / ONNX Runtime，同时以进程级服务 rusto.ocr 供宿主与其它插件调用。
-  支持 Windows、Linux、macOS 与 Android AArch64/x86_64。
+  支持 Windows、Linux 与 macOS（0.1.5 起不再支持 Android）。
 repo: fengyegf/fy-plugins
 homepage: https://github.com/fengyegf/fy-plugins/tree/main/crates/fuyubot-plugin-rusto
 tags: [ocr, image, text, service]
@@ -31,3 +31,12 @@ versions:
       macos-aarch64: fengyegf.rusto-0.1.4-macos-aarch64.zip
       android-aarch64: fengyegf.rusto-0.1.4-android-aarch64.zip
       android-x86_64: fengyegf.rusto-0.1.4-android-x86_64.zip
+
+  # 0.1.5：ABI 6，只保留桌面三平台（移除 Android）；模型目录改从动态库位置推出，
+  # 缺失时由插件用纯 Rust HTTPS 自动下载（官方源失败自动换 hf-mirror）
+  - version: 0.1.5
+    tag: fengyegf.rusto-v0.1.5
+    assets:
+      windows-x86_64: fengyegf.rusto-0.1.5-windows-x86_64.zip
+      linux-x86_64: fengyegf.rusto-0.1.5-linux-x86_64.zip
+      macos-aarch64: fengyegf.rusto-0.1.5-macos-aarch64.zip
