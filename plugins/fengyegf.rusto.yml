@@ -21,3 +21,13 @@ versions:
       macos-aarch64: fengyegf.rusto-0.1.3-macos-aarch64.zip
       android-aarch64: fengyegf.rusto-0.1.3-android-aarch64.zip
       android-x86_64: fengyegf.rusto-0.1.3-android-x86_64.zip
+
+  # 0.1.4：ABI 6，安卓从插件目录找随包模型，缺下载器时直报手动放置
+  - version: 0.1.4
+    tag: fengyegf.rusto-v0.1.4
+    assets:
+      windows-x86_64: fengyegf.rusto-0.1.4-windows-x86_64.zip
+      linux-x86_64: fengyegf.rusto-0.1.4-linux-x86_64.zip
+      macos-aarch64: fengyegf.rusto-0.1.4-macos-aarch64.zip
+      android-aarch64: fengyegf.rusto-0.1.4-android-aarch64.zip
+      android-x86_64: fengyegf.rusto-0.1.4-android-x86_64.zip
