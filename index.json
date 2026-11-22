@@ -98,7 +98,7 @@
       "id": "fengyegf.rusto",
       "name": "RustO OCR",
       "summary": "纯 Rust OCR：发图 /ocr 识别文字，并以 rusto.ocr 服务供其它插件调用。",
-      "latest": "0.1.4",
+      "latest": "0.1.5",
       "detail": "plugins/fengyegf.rusto.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
