@@ -1,0 +1,24 @@
+id: fengyegf.agent
+name: AI Agent
+summary: Telegram 侧 AI Agent 运行时：私聊/话题会话、单次与循环推理、Bot-to-Bot 防环、会话 JSON 落盘，并把能力暴露成工具与共享服务。
+description: |
+  Telegram 侧的 AI Agent 运行时：监听 updateNewMessage，按 chat + topic 归档会话并 JSON 落盘，
+  组装提示词后经 fengyegf.llm 网关推理；支持单次 / 循环推理、富草稿流式回复、公式适配、
+  AI 话题标题、会话 7 天自动清理与失败重试（原因回传）；带去重、Bot-to-Bot 频率与深度限制。
+  对外提供 fengyegf.agent.chat / .run / .send / .session / .title 五个工具、/agent 命令
+  与 fengyegf.agent 共享服务。网关是软依赖，不在场时降级为兜底文案，插件照常运行。
+repo: fengyegf/fy-plugins
+homepage: https://github.com/fengyegf/fy-plugins/tree/main/crates/fuyubot-plugin-agent
+tags: [ai, agent, telegram, session, service]
+abi: 6
+depends: [fengyegf.llm]
+versions:
+  # 0.1.0：首个发布；ABI 6，资产按 fengyegf.<id> 命名
+  - version: 0.1.0
+    tag: fengyegf.agent-v0.1.0
+    assets:
+      windows-x86_64: fengyegf.agent-0.1.0-windows-x86_64.zip
+      linux-x86_64: fengyegf.agent-0.1.0-linux-x86_64.zip
+      macos-aarch64: fengyegf.agent-0.1.0-macos-aarch64.zip
+      android-aarch64: fengyegf.agent-0.1.0-android-aarch64.zip
+      android-x86_64: fengyegf.agent-0.1.0-android-x86_64.zip
