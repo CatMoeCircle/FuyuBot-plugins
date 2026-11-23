@@ -1,0 +1,23 @@
+id: fengyegf.llm
+name: LLM Gateway
+summary: 面向 AI Agent 的大模型协议网关：OpenAI Chat Completions、OpenAI Responses、Anthropic Messages，零 AI SDK 依赖，自实现 HTTP/SSE。
+description: |
+  零 AI SDK 依赖的三大协议网关：OpenAI Chat Completions、OpenAI Responses、Anthropic Messages。
+  统一处理鉴权、超时、重试与流式 SSE；对外提供 chat / responses / messages / models / test /
+  stream / stream_poll / stream_cancel 工具与 fengyegf.llm 共享服务，供 fengyegf.agent
+  等插件调用。支持 Windows、Linux、macOS 与 Android AArch64/x86_64。
+repo: fengyegf/fy-plugins
+homepage: https://github.com/fengyegf/fy-plugins/tree/main/crates/fuyubot-plugin-llm
+tags: [ai, llm, gateway, openai, anthropic, service]
+abi: 6
+depends: []
+versions:
+  # 0.1.1：首个发布（含 stream / stream_poll / stream_cancel 流式服务）；ABI 6
+  - version: 0.1.1
+    tag: fengyegf.llm-v0.1.1
+    assets:
+      windows-x86_64: fengyegf.llm-0.1.1-windows-x86_64.zip
+      linux-x86_64: fengyegf.llm-0.1.1-linux-x86_64.zip
+      macos-aarch64: fengyegf.llm-0.1.1-macos-aarch64.zip
+      android-aarch64: fengyegf.llm-0.1.1-android-aarch64.zip
+      android-x86_64: fengyegf.llm-0.1.1-android-x86_64.zip
