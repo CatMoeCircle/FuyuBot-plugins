@@ -2,6 +2,31 @@
   "schema": 2,
   "plugins": [
     {
+      "id": "fengyegf.agent",
+      "name": "AI Agent",
+      "summary": "Telegram 侧 AI Agent 运行时：私聊/话题会话、单次与循环推理、Bot-to-Bot 防环、会话 JSON 落盘，并把能力暴露成工具与共享服务。",
+      "latest": "0.1.0",
+      "detail": "plugins/fengyegf.agent.json",
+      "repo": "fengyegf/fy-plugins",
+      "tags": [
+        "ai",
+        "agent",
+        "telegram",
+        "session",
+        "service"
+      ],
+      "abis": [
+        6
+      ],
+      "platform_min_abi": {
+        "windows-x86_64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
+      }
+    },
+    {
       "id": "fengyegf.bidibot",
       "name": "Bidibot 双向私聊",
       "summary": "把陌生人私聊收进论坛群话题，主人在话题里回复即转发回用户（双向中转）。",
@@ -59,6 +84,32 @@
         "kfc",
         "meme",
         "card"
+      ],
+      "abis": [
+        6
+      ],
+      "platform_min_abi": {
+        "windows-x86_64": 6,
+        "linux-x86_64": 6,
+        "macos-aarch64": 6,
+        "android-aarch64": 6,
+        "android-x86_64": 6
+      }
+    },
+    {
+      "id": "fengyegf.llm",
+      "name": "LLM Gateway",
+      "summary": "面向 AI Agent 的大模型协议网关：OpenAI Chat Completions、OpenAI Responses、Anthropic Messages，零 AI SDK 依赖，自实现 HTTP/SSE。",
+      "latest": "0.1.1",
+      "detail": "plugins/fengyegf.llm.json",
+      "repo": "fengyegf/fy-plugins",
+      "tags": [
+        "ai",
+        "llm",
+        "gateway",
+        "openai",
+        "anthropic",
+        "service"
       ],
       "abis": [
         6
