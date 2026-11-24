@@ -22,3 +22,14 @@ versions:
       macos-aarch64: fengyegf.agent-0.1.0-macos-aarch64.zip
       android-aarch64: fengyegf.agent-0.1.0-android-aarch64.zip
       android-x86_64: fengyegf.agent-0.1.0-android-x86_64.zip
+
+  # 0.1.1：内置屏蔽 fuyubot.td.functions（原始 TDLib 调用入口，schema 巨大、会撑爆上下文）
+  - version: 0.1.1
+    tag: fengyegf.agent-v0.1.1
+    assets:
+      windows-x86_64: fengyegf.agent-0.1.1-windows-x86_64.zip
+      linux-x86_64: fengyegf.agent-0.1.1-linux-x86_64.zip
+      macos-aarch64: fengyegf.agent-0.1.1-macos-aarch64.zip
+      android-aarch64: fengyegf.agent-0.1.1-android-aarch64.zip
+      android-x86_64: fengyegf.agent-0.1.1-android-x86_64.zip
+
