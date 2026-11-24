@@ -5,7 +5,7 @@
       "id": "fengyegf.agent",
       "name": "AI Agent",
       "summary": "Telegram 侧 AI Agent 运行时：私聊/话题会话、单次与循环推理、Bot-to-Bot 防环、会话 JSON 落盘，并把能力暴露成工具与共享服务。",
-      "latest": "0.1.0",
+      "latest": "0.1.1",
       "detail": "plugins/fengyegf.agent.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
@@ -173,7 +173,7 @@
       "id": "fengyegf.system",
       "name": "System",
       "summary": "查看宿主机系统信息与机器人状态，渲染成信息卡片并以照片回复。",
-      "latest": "0.1.7",
+      "latest": "0.1.8",
       "detail": "plugins/fengyegf.system.json",
       "repo": "fengyegf/fy-plugins",
       "tags": [
