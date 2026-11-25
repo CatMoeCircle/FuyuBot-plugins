@@ -425,28 +425,6 @@
       }
     },
     {
-      "id": "ppxfy",
-      "name": "PPXFY",
-      "summary": "从 DMM / DLSite 下载并解压作品，附带记录与 Telegraph 上传。",
-      "latest": "0.1.6",
-      "detail": "plugins/ppxfy.json",
-      "repo": "fengyegf/fy-plugins",
-      "tags": [
-        "dmm",
-        "dlsite",
-        "download"
-      ],
-      "abis": [
-        5,
-        6
-      ],
-      "platform_min_abi": {
-        "windows-x86_64": 5,
-        "linux-x86_64": 5,
-        "macos-aarch64": 5
-      }
-    },
-    {
       "id": "xiaoqvan.adblock",
       "name": "Adblock",
       "summary": "广告拦截：关键词 / 文件 / 贴纸 / 转发来源 / AI 审核，命中即删除、禁言或封禁；自动点赞机器人默认只封禁回应权限（可跟随广告）；可删入群提示、取消频道置顶；可用 chat_allowlist 限定只在指定群生效。",
